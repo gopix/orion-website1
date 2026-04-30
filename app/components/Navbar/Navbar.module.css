@@ -1,4 +1,4 @@
-/* ── Layout ───────────────────────────────────────────────── */
+/* ── Base nav ─────────────────────────────────────────────── */
 .nav {
   display: flex;
   justify-content: space-between;
@@ -18,7 +18,7 @@
   flex-shrink: 0;
 }
 
-/* Right-side cluster: links + search */
+/* ── Right cluster (desktop) ──────────────────────────────── */
 .right {
   display: flex;
   align-items: center;
@@ -35,12 +35,12 @@
   align-items: center;
 }
 
-.navItem {
+.navitem {
   position: relative;
 }
 
-/* Base nav button */
-.navBtn {
+/* ── Nav button ───────────────────────────────────────────── */
+.navbtn {
   display: flex;
   align-items: center;
   gap: 2px;
@@ -54,10 +54,11 @@
   cursor: pointer;
   transition: background 160ms ease, color 160ms ease;
   white-space: nowrap;
+  width: 100%;
 }
 
-.navBtn:hover,
-.navBtnActive {
+.navbtn:hover,
+.navbtnactive {
   background: color-mix(in srgb, var(--primary) 10%, transparent);
   color: var(--primary-strong);
 }
@@ -76,11 +77,11 @@
   list-style: none;
   padding: 6px;
   margin: 0;
-  animation: dropIn 160ms ease forwards;
+  animation: dropin 160ms ease forwards;
   z-index: 30;
 }
 
-@keyframes dropIn {
+@keyframes dropin {
   from {
     opacity: 0;
     transform: translateX(-50%) translateY(-6px);
@@ -91,7 +92,7 @@
   }
 }
 
-.dropdownItem {
+.dropdownitem {
   display: block;
   width: 100%;
   text-align: left;
@@ -106,19 +107,19 @@
   transition: background 140ms ease, color 140ms ease;
 }
 
-.dropdownItem:hover {
+.dropdownitem:hover {
   background: color-mix(in srgb, var(--primary) 10%, transparent);
   color: var(--primary-strong);
 }
 
 /* ── Search ───────────────────────────────────────────────── */
-.searchWrapper {
+.searchwrapper {
   display: flex;
   align-items: center;
   gap: 6px;
 }
 
-.iconBtn {
+.iconbtn {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -130,15 +131,15 @@
   color: var(--foreground);
   cursor: pointer;
   transition: background 160ms ease, color 160ms ease;
+  flex-shrink: 0;
 }
 
-.iconBtn:hover {
+.iconbtn:hover {
   background: color-mix(in srgb, var(--primary) 10%, transparent);
   color: var(--primary-strong);
 }
 
-.searchInput {
-  width: 0;
+.searchinput {
   padding: 7px 12px;
   border: 1px solid var(--border);
   border-radius: 8px;
@@ -146,21 +147,97 @@
   color: var(--foreground);
   font-size: 0.875rem;
   outline: none;
-  transition: width 220ms ease, padding 220ms ease, border-color 180ms ease;
   width: 180px;
+  transition: border-color 180ms ease;
 }
 
-.searchInput:focus {
+.searchinput:focus {
   border-color: var(--primary);
 }
 
-/* ── Responsive ───────────────────────────────────────────── */
+/* ── Hamburger (hidden on desktop) ───────────────────────── */
+.menubtn {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  color: var(--foreground);
+  padding: 4px 8px;
+  border-radius: 6px;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+/* ── Mobile ───────────────────────────────────────────────── */
 @media (max-width: 960px) {
   .nav {
     padding: 14px 20px;
-    gap: 10px;
+    flex-wrap: wrap;
+    gap: 0;
   }
-  .links {
+
+  /* Show hamburger */
+  .menubtn {
+    display: block;
+  }
+
+  /* Right cluster: hidden by default, shown when .rightopen */
+  .right {
     display: none;
+    width: 100%;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    border-top: 1px solid var(--border);
+    margin-top: 10px;
+    padding-top: 8px;
+  }
+
+  .rightopen {
+    display: flex;
+  }
+
+  /* Links stack vertically */
+  .links {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 2px;
+    width: 100%;
+  }
+
+  .navitem {
+    width: 100%;
+  }
+
+  .navbtn {
+    width: 100%;
+    justify-content: space-between;
+    padding: 10px 12px;
+  }
+
+  /* Dropdown becomes inline (no absolute positioning) */
+  .dropdown {
+    position: static;
+    transform: none;
+    width: 100%;
+    box-shadow: none;
+    border: none;
+    border-radius: 0;
+    padding: 0 0 4px 12px;
+    animation: none;
+    background: transparent;
+  }
+
+  /* Search stacks below nav items */
+  .searchwrapper {
+    padding: 8px 4px;
+    border-top: 1px solid var(--border);
+    margin-top: 4px;
+  }
+
+  .searchinput {
+    width: 100%;
+    flex: 1;
   }
 }
