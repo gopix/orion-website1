@@ -1,10 +1,12 @@
 "use client"
 import { useState, useEffect } from "react"
 import Image from "next/image"
-import background from "./back.png"
-import styles from "./Hero.module.css"
+
+import background from "./img/back.png"
+import styles from "./styles/Hero.module.css"
 
 
+import Info from "./Info"
 const HERO_CONTENT = [
     {
         title: "ORION Bits Systems Pvt. Ltd.",
@@ -40,36 +42,41 @@ export default function Hero() {
         );
     };
     return (
-        <div className={styles.main}>
-            {/* Background */}
-            <Image
-                fill
-                src={background}
-                alt="background"
-                style={{ objectFit: "cover" }}
-                priority
-            />
-            {/* Dark overlay */}
-            <div className={styles.overlay} />
+        <>
 
-            <div className={styles.hero_content}>
+            <div className={styles.main}>
+                {/* Background */}
+                <Image
+                    fill
+                    src={background}
+                    alt="background"
+                    style={{ objectFit: "cover" }}
+                    priority
+                />
+                {/* Dark overlay */}
+                <div className={styles.overlay} />
 
-                {/* Left Arrow */}
-                <button className={styles.arrowLeft} onClick={arrowLeftClick}  ></button>
+                <div className={styles.hero_content}>
 
-                {/* Right Arrow */}
-                <button className={styles.arrowRight} onClick={arrowRightClick}  ></button>
+                    {/* Left Arrow */}
+                    <button className={styles.arrowLeft} onClick={arrowLeftClick}  ></button>
 
-                {/* Content */}
-                <div className={styles.text}>
+                    {/* Right Arrow */}
+                    <button className={styles.arrowRight} onClick={arrowRightClick}  ></button>
 
-                    <h1>{item.title}</h1>
-                    <h2>{item.subtitle}</h2>
-                    <p>{item.description}</p>
+                    {/* Content */}
+                    <div className={styles.text}>
 
-                    <button className={styles.cta}>Learn More</button>
+                        <h1>{item.title}</h1>
+                        <h2>{item.subtitle}</h2>
+                        <p>{item.description}</p>
+
+                        <button className={styles.cta}>Learn More</button>
+                    </div>
                 </div>
             </div>
-        </div>
+
+            <Info />
+        </>
     );
 }
