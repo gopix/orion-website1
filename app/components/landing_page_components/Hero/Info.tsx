@@ -11,7 +11,6 @@ export default function Info() {
             {/* ── Top row: image + text card ── */}
             <div className={styles.topRow}>
                 <div className={styles.imageWrap}>
-
                     <Image src={info_image} alt="image" />
                 </div>
 

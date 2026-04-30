@@ -1,0 +1,7 @@
+-------- Todo -------
+
+- in Home Page 
+* change the earth image to something suitable 
+* add text changing animations 
+* add capcha in the form 
+* add footer containg company contact info etc 
