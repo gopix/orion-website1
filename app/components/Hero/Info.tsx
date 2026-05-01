@@ -4,7 +4,6 @@ import styles from "./styles/Info.module.css"
 import info_image from "./img/info_image.png"
 import info_image2 from "./img/info_image2.png"
 
-// ── Types ─────────────────────────────────────────────────────────
 interface InfoImageProps {
     src: StaticImageData
     alt?: string
@@ -15,7 +14,6 @@ interface InfoCardProps {
     body: string
 }
 
-// ── Reusable image block ──────────────────────────────────────────
 function InfoImage({ src, alt = "image" }: InfoImageProps) {
     return (
         <div className={styles.imageWrap}>
@@ -24,7 +22,6 @@ function InfoImage({ src, alt = "image" }: InfoImageProps) {
     )
 }
 
-// ── Reusable text card ────────────────────────────────────────────
 function InfoCard({ heading, body }: InfoCardProps) {
     return (
         <div className={styles.card}>
@@ -34,12 +31,10 @@ function InfoCard({ heading, body }: InfoCardProps) {
     )
 }
 
-// ── Main Info section ─────────────────────────────────────────────
 export default function Info() {
     return (
         <section className={styles.section}>
 
-            {/* ── Row 1: image LEFT + card RIGHT ── */}
             <div className={styles.topRow}>
                 <InfoImage
                     src={info_image}
@@ -56,7 +51,6 @@ export default function Info() {
                 />
             </div>
 
-            {/* ── Philosophy strip 1 ── */}
             <div className={styles.philosophy}>
                 <div className={styles.philLeft}>
                     <h3>
@@ -74,7 +68,6 @@ export default function Info() {
                 </div>
             </div>
 
-            {/* ── Row 2: card LEFT + image RIGHT ── */}
             <div className={styles.topRow}>
                 <InfoCard
                     heading={
@@ -91,7 +84,6 @@ export default function Info() {
                 />
             </div>
 
-            {/* ── Philosophy strip 2 ── */}
             <div className={styles.philosophy}>
                 <div className={styles.philLeft}>
                     <h3>
