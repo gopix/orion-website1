@@ -17,9 +17,7 @@
     display: flex;
     align-items: stretch;
     gap: 40px;
-    max-width: 1200px;
-    margin: 0 auto 72px;
-    margin-top: 80px;
+    width: 100%;
 }
 
 .imageWrap {
@@ -62,14 +60,24 @@
     margin: 0;
 }
 
-/* ── Philosophy strip ── */
-.philosophy {
+.block {
     max-width: 1200px;
-    margin: 0 auto;
+    margin: 0 auto 72px;
+    margin-top: 80px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.philosophy {
+    margin-top:40px ;
     display: flex;
     align-items: center;
-    margin-left: 10%;
-    gap: 60px;
+    gap: 40px;
+    width: 100%;
+    box-sizing: border-box;
+    padding-left: calc(110px + 40px);
+    /* matches imageWrap width + gap */
 }
 
 .philLeft h3 {
@@ -92,6 +100,12 @@
     flex-shrink: 0;
 }
 
+.philRight {
+    flex: 1;
+    min-width: 0;
+    /* prevents flex overflow */
+}
+
 .philRight p {
     font-size: 0.95rem;
     color: #3d5068;
@@ -106,15 +120,21 @@
 
 /* ── Responsive ── */
 @media (max-width: 768px) {
+    .topRow {
+        flex-direction: column;
+    }
+
+
+    .philosophy {
+        padding-left: 0;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
     .section {
         padding: 60px 24px;
     }
 
-    .topRow {
-        flex-direction: column;
-        margin-top: 40px;
-        margin-bottom: 40px;
-    }
 
     .imageWrap {
         flex: 0 0 auto;
@@ -123,12 +143,6 @@
 
     .card {
         padding: 32px 24px;
-    }
-
-    .philosophy {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 24px;
     }
 
     .philDivider {
@@ -161,8 +175,11 @@
 }
 
 @keyframes fadeIn {
-    from { opacity: 0; }
-    to   { opacity: 1; }
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
 }
-
-
