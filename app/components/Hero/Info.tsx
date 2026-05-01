@@ -1,11 +1,22 @@
 "use client"
-import Image from "next/image"
+import Image, { StaticImageData } from "next/image"
 import styles from "./styles/Info.module.css"
 import info_image from "./img/info_image.png"
 import info_image2 from "./img/info_image2.png"
 
+// ── Types ─────────────────────────────────────────────────────────
+interface InfoImageProps {
+    src: StaticImageData
+    alt?: string
+}
+
+interface InfoCardProps {
+    heading: React.ReactNode
+    body: string
+}
+
 // ── Reusable image block ──────────────────────────────────────────
-function InfoImage({ src, alt = "image" }) {
+function InfoImage({ src, alt = "image" }: InfoImageProps) {
     return (
         <div className={styles.imageWrap}>
             <Image src={src} alt={alt} />
@@ -14,7 +25,7 @@ function InfoImage({ src, alt = "image" }) {
 }
 
 // ── Reusable text card ────────────────────────────────────────────
-function InfoCard({ heading, body }) {
+function InfoCard({ heading, body }: InfoCardProps) {
     return (
         <div className={styles.card}>
             <h2>{heading}</h2>
@@ -22,11 +33,13 @@ function InfoCard({ heading, body }) {
         </div>
     )
 }
+
+// ── Main Info section ─────────────────────────────────────────────
 export default function Info() {
     return (
         <section className={styles.section}>
 
-            {/* ── Top row: image LEFT + card RIGHT ── */}
+            {/* ── Row 1: image LEFT + card RIGHT ── */}
             <div className={styles.topRow}>
                 <InfoImage
                     src={info_image}
@@ -39,17 +52,11 @@ export default function Info() {
                             for the Publishing Industry
                         </>
                     }
-                    body="ORION Bits Systems is a technology company focused on building intelligent digital
-                    systems for the publishing industry. We help publishers move from fragmented
-                    operations and manual workflows to structured systems, real-time visibility, and
-                    better decision-making—without disrupting their existing tools. As an intelligence
-                    layer on top of your current ecosystem, we deliver clarity, consistency, and
-                    control through precision—not complexity."
+                    body="ORION Bits Systems is a technology company focused on building intelligent digital systems for the publishing industry. We help publishers move from fragmented operations and manual workflows to structured systems, real-time visibility, and better decision-making—without disrupting their existing tools. As an intelligence layer on top of your current ecosystem, we deliver clarity, consistency, and control through precision—not complexity."
                 />
             </div>
 
-            {/* ── Second row: card LEFT + image RIGHT (reversed) ── */}
-            {/* ── Philosophy strip ── */}
+            {/* ── Philosophy strip 1 ── */}
             <div className={styles.philosophy}>
                 <div className={styles.philLeft}>
                     <h3>
@@ -67,25 +74,24 @@ export default function Info() {
                 </div>
             </div>
 
+            {/* ── Row 2: card LEFT + image RIGHT ── */}
             <div className={styles.topRow}>
-
                 <InfoCard
                     heading={
                         <>
-                            Zoho-Powered Business Systems
-                            <br />
+                            Zoho-Powered Business Systems<br />
                             for Growing Organizations
                         </>
                     }
                     body="We help businesses implement structured digital systems using Zoho to streamline operations and improve efficiency. From CRM setup and sales automation to inventory management and custom reporting dashboards — ORION configures and connects your tools so your team spends less time on manual work and more time on what matters. Built for publishers, distributors, and content-driven businesses across India."
                 />
-
                 <InfoImage
                     src={info_image2}
                     alt="Data-driven publishing workflows"
                 />
             </div>
 
+            {/* ── Philosophy strip 2 ── */}
             <div className={styles.philosophy}>
                 <div className={styles.philLeft}>
                     <h3>
@@ -106,4 +112,3 @@ export default function Info() {
         </section>
     )
 }
-

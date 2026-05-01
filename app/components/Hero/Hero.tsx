@@ -5,7 +5,13 @@ import background from "./img/back.jpg"
 import styles from "./styles/Hero.module.css"
 import Info from "./Info"
 
-const HERO_CONTENT = [
+interface HeroSlide {
+    title: string
+    subtitle: string
+    description: string
+}
+
+const HERO_CONTENT: HeroSlide[] = [
     {
         title: "ORION Bits Systems Pvt. Ltd.",
         subtitle: "Intelligent Digital Systems for the Publishing Industry",
@@ -13,49 +19,49 @@ const HERO_CONTENT = [
             "We help publishers move from fragmented workflows to structured, intelligent systems with real-time visibility and better decision-making.",
     },
     {
-        title: "3 ORION Bits Systems Pvt. Ltd.",
-        subtitle: "Intelligent Digital Systems for the Publishing Industry",
+        title: "Zoho Business Systems",
+        subtitle: "Structured Digital Operations for Growing Businesses",
         description:
-            "We help publishers move from fragmented workflows to structured, intelligent systems with real-time visibility and better decision-making.",
+            "We implement and customize Zoho CRM, automation, and reporting tools — giving your team organized workflows and a strong foundation for scalable growth.",
     },
     {
-        title: "2 ORION Bits Systems Pvt. Ltd.",
-        subtitle: "Intelligent Digital Systems for the Publishing Industry",
+        title: "Publishing Intelligence Platform",
+        subtitle: "From Submission to Sale — One Connected System",
         description:
-            "We help publishers move from fragmented workflows to structured, intelligent systems with real-time visibility and better decision-making.",
-    }
-];
+            "ORION SUBMIT+, EDITOR+, and PUBLISH+ work together to validate manuscripts, improve editorial quality, and deliver real-time business visibility.",
+    },
+]
 
 export default function Hero() {
-    const [index, setIndex] = useState(0);
-    const [animate, setAnimate] = useState(true);
-    const [direction, setDirection] = useState("right");
+    const [index, setIndex] = useState<number>(0)
+    const [animate, setAnimate] = useState<boolean>(true)
+    const [direction, setDirection] = useState<"right" | "left">("right")
 
-    const item = HERO_CONTENT[index];
+    const item = HERO_CONTENT[index]
 
     const triggerAnimation = () => {
-        setAnimate(false);
-        setTimeout(() => setAnimate(true), 50);
-    };
+        setAnimate(false)
+        setTimeout(() => setAnimate(true), 50)
+    }
 
     const arrowRightClick = () => {
-        setDirection("right");
-        setIndex((prev) => (prev + 1) % HERO_CONTENT.length);
-        triggerAnimation();
-    };
+        setDirection("right")
+        setIndex((prev) => (prev + 1) % HERO_CONTENT.length)
+        triggerAnimation()
+    }
 
     const arrowLeftClick = () => {
-        setDirection("left");
-        setIndex((prev) => (prev - 1 + HERO_CONTENT.length) % HERO_CONTENT.length);
-        triggerAnimation();
-    };
+        setDirection("left")
+        setIndex((prev) => (prev - 1 + HERO_CONTENT.length) % HERO_CONTENT.length)
+        triggerAnimation()
+    }
 
-    const goToSlide = (i) => {
-        if (i === index) return;
-        setDirection(i > index ? "right" : "left");
-        setIndex(i);
-        triggerAnimation();
-    };
+    const goToSlide = (i: number) => {
+        if (i === index) return
+        setDirection(i > index ? "right" : "left")
+        setIndex(i)
+        triggerAnimation()
+    }
 
     return (
         <>
@@ -87,7 +93,6 @@ export default function Hero() {
                     <button className={styles.cta}>Learn More</button>
                 </div>
 
-                {/* Dot indicators */}
                 <div className={styles.dots}>
                     {HERO_CONTENT.map((_, i) => (
                         <button
@@ -101,5 +106,5 @@ export default function Hero() {
             </div>
             <Info />
         </>
-    );
+    )
 }
