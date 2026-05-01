@@ -1,10 +1,8 @@
 "use client"
-import { useState, useEffect } from "react"
+import { useState } from "react"
 import Image from "next/image"
-
-import background from "./img/back.png"
+import background from "./img/back.jpg"
 import styles from "./styles/Hero.module.css"
-
 import Info from "./Info"
 
 const HERO_CONTENT = [
@@ -34,24 +32,31 @@ export default function Hero() {
     const [direction, setDirection] = useState("right");
 
     const item = HERO_CONTENT[index];
+
     const triggerAnimation = () => {
         setAnimate(false);
         setTimeout(() => setAnimate(true), 50);
     };
 
     const arrowRightClick = () => {
-        setDirection("right"); //  coming from right
+        setDirection("right");
         setIndex((prev) => (prev + 1) % HERO_CONTENT.length);
         triggerAnimation();
     };
 
     const arrowLeftClick = () => {
-        setDirection("left"); //  coming from left
-        setIndex((prev) =>
-            (prev - 1 + HERO_CONTENT.length) % HERO_CONTENT.length
-        );
+        setDirection("left");
+        setIndex((prev) => (prev - 1 + HERO_CONTENT.length) % HERO_CONTENT.length);
         triggerAnimation();
     };
+
+    const goToSlide = (i) => {
+        if (i === index) return;
+        setDirection(i > index ? "right" : "left");
+        setIndex(i);
+        triggerAnimation();
+    };
+
     return (
         <>
             <div className={styles.main}>
@@ -62,30 +67,38 @@ export default function Hero() {
                     style={{ objectFit: "cover" }}
                     priority
                 />
+                <div className={styles.overlay} />
 
-                <div className={styles.hero_content}>
-                    <button className={styles.arrowLeft} onClick={arrowLeftClick}></button>
-                    <button className={styles.arrowRight} onClick={arrowRightClick}></button>
+                <button className={styles.arrowLeft} onClick={arrowLeftClick} aria-label="Previous slide" />
+                <button className={styles.arrowRight} onClick={arrowRightClick} aria-label="Next slide" />
 
-                    {/* 👇 Apply animation class */}
+                <div
+                    className={`${styles.text} ${
+                        animate
+                            ? direction === "right"
+                                ? styles.slideRight
+                                : styles.slideLeft
+                            : ""
+                    }`}
+                >
+                    <h1>{item.title}</h1>
+                    <h2>{item.subtitle}</h2>
+                    <p>{item.description}</p>
+                    <button className={styles.cta}>Learn More</button>
+                </div>
 
-                    <div
-                        className={`${styles.text} ${animate
-                                ? direction === "right"
-                                    ? styles.slideRight
-                                    : styles.slideLeft
-                                : ""
-                            }`}
-                    >
-                        <h1>{item.title}</h1>
-                        <h2>{item.subtitle}</h2>
-                        <p>{item.description}</p>
-
-                        <button className={styles.cta}>Learn More</button>
-                    </div>
+                {/* Dot indicators */}
+                <div className={styles.dots}>
+                    {HERO_CONTENT.map((_, i) => (
+                        <button
+                            key={i}
+                            className={`${styles.dot} ${i === index ? styles.active : ""}`}
+                            onClick={() => goToSlide(i)}
+                            aria-label={`Go to slide ${i + 1}`}
+                        />
+                    ))}
                 </div>
             </div>
-
             <Info />
         </>
     );

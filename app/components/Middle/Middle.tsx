@@ -56,7 +56,6 @@ export default function Middle() {
                     {/* floating card image */}
                </div>
             </section>
-            <Portfolio />
 
         </div>
     );

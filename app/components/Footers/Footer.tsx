@@ -2,11 +2,10 @@
 
 import styles from "./Footer.module.css";
 import Image from "next/image";
-import logo from "../../../../logo.jpeg"
+import logo from "../../logo.jpeg"
 
 import facebook from "./icon/facebook.png"
 import twitter from "./icon/twitter.png"
-import instagram from "./icon/instagram.png"
 import linkedin from "./icon/linkedin.png"
 
 export default function Footer() {
@@ -37,10 +36,6 @@ export default function Footer() {
 
                         <a href="#" target="_blank">
                             <Image src={linkedin} alt="LinkedIn" width={iconSize} height={iconSize} />
-                        </a>
-
-                        <a href="#" target="_blank">
-                        <Image src={instagram} alt="Instagram" width={iconSize} height={iconSize} />
                         </a>
                     </div>
                 </div>
@@ -82,7 +77,7 @@ export default function Footer() {
             {/* BOTTOM */}
             <div className={styles.bottom}>
                 <p>
-                    Copyright © 2025 ORION Bits Systems Pvt. Ltd. All rights reserved.
+                    Copyright © 2026 ORION Bits Systems Pvt. Ltd. All rights reserved.
                 </p>
             </div>
 

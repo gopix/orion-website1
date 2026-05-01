@@ -12,6 +12,7 @@
     gap: 40px;
     max-width: 1200px;
     margin: 0 auto 72px;
+    margin-top: 80px;
 }
 
 
@@ -34,7 +35,7 @@
     background: #f4f7fb;
     border-radius: 10px;
     padding: 48px 44px;
-    border-left: 4px solid #1a5fd4;
+    border: 2px solid #1a5fd4;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -150,3 +151,6 @@
         opacity: 1;
     }
 }
+/* Add this to Info.module.css */
+
+

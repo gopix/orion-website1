@@ -3,7 +3,6 @@
   background: #f7f9fc;
   color: #1a1a1a;
   position: relative;
-  margin: 40px 0;
 }
 .section::before {
   content: "";
@@ -143,4 +142,223 @@
   .header h2 {
     font-size: 28px;
   }
+}
+
+
+/* ── Section ── */
+.section {
+    position: relative;
+    padding: 80px 6%;
+    background: #ffffff;
+    overflow: hidden;
+}
+
+/* ── Dot grids (decorative) ── */
+.dotGridLeft,
+.dotGridRight {
+    position: absolute;
+    top: 0;
+    width: 180px;
+    height: 80px;
+    background-image: radial-gradient(circle, #c8d9f7 1.5px, transparent 1.5px);
+    background-size: 14px 14px;
+    opacity: 0.7;
+    pointer-events: none;
+}
+
+.dotGridLeft { left: 0; }
+.dotGridRight { right: 0; }
+
+/* ── Header row ── */
+.header {
+    display: flex;
+    align-items: flex-start;
+    gap: 60px;
+    margin-bottom: 48px;
+}
+
+.headerLeft {
+    flex: 0 0 auto;
+    max-width: 340px;
+}
+
+.heading {
+    font-size: clamp(1.6rem, 2.8vw, 2.4rem);
+    font-weight: 800;
+    color: #0d1b2a;
+    line-height: 1.2;
+    margin-bottom: 28px;
+}
+
+.headerRight {
+    flex: 1;
+    padding-top: 6px;
+}
+
+.subtext {
+    font-size: clamp(0.9rem, 1.2vw, 1.05rem);
+    color: #4a5568;
+    line-height: 1.75;
+    max-width: 620px;
+}
+
+/* ── Tabs ── */
+.tabs {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.tab {
+    padding: 8px 22px;
+    border-radius: 999px;
+    border: 1.5px solid #d0d8e8;
+    background: transparent;
+    color: #4a5568;
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.tab:hover {
+    border-color: #1a75ff;
+    color: #1a75ff;
+}
+
+.tabActive {
+    background: #1a75ff !important;
+    border-color: #1a75ff !important;
+    color: #ffffff !important;
+}
+
+/* ── Cards grid ── */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 28px;
+}
+
+/* ── Single card ── */
+.card {
+    background: #ffffff;
+    border: 1.5px solid #e2eaf6;
+    border-radius: 14px;
+    padding: 36px 32px 28px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    box-shadow: 0 2px 12px rgba(26, 117, 255, 0.05);
+    transition: box-shadow 0.25s ease, border-color 0.25s ease, transform 0.25s ease;
+}
+
+.card:hover {
+    box-shadow: 0 8px 28px rgba(26, 117, 255, 0.12);
+    border-color: #a8c4f5;
+    transform: translateY(-3px);
+}
+
+/* ── Zoho logo ── */
+.zohoLogo {
+    display: flex;
+    align-items: center;
+    font-size: 2rem;
+    font-weight: 900;
+    letter-spacing: -1px;
+    line-height: 1;
+}
+
+.z  { color: #e84c3d; }
+.o1 { color: #f5a623; }
+.h  { color: #4caf50; }
+.o2 { color: #2196f3; }
+
+/* ── ORION logo ── */
+.orionLogo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.orionIcon {
+    font-size: 1.8rem;
+    color: #1a75ff;
+    line-height: 1;
+}
+
+.orionWord {
+    font-size: 1.5rem;
+    font-weight: 900;
+    letter-spacing: 2px;
+    color: #0d1b2a;
+}
+
+/* ── Card content ── */
+.cardLogo {
+    min-height: 48px;
+    display: flex;
+    align-items: center;
+}
+
+.cardSubtitle {
+    font-size: 0.78rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #1a75ff;
+}
+
+.cardDesc {
+    font-size: 0.95rem;
+    color: #4a5568;
+    line-height: 1.7;
+    flex: 1;
+    margin: 0;
+}
+
+.knowMore {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #0d1b2a;
+    text-decoration: none;
+    margin-top: 4px;
+    transition: color 0.2s ease, gap 0.2s ease;
+}
+
+.knowMore:hover {
+    color: #1a75ff;
+    gap: 10px;
+}
+
+.arrow {
+    transition: transform 0.2s ease;
+}
+
+.knowMore:hover .arrow {
+    transform: translateX(3px);
+}
+
+/* ── Responsive ── */
+@media (max-width: 900px) {
+    .header {
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    .headerLeft {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 640px) {
+    .section {
+        padding: 60px 5%;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
 }

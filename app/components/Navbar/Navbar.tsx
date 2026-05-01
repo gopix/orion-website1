@@ -1,34 +1,44 @@
 "use client";
+
+
 import styles from "./Navbar.module.css";
 import { useEffect, useRef, useState } from "react";
-import logo from "../../logo.jpeg";
-import Image from "next/image";
 
-type NavbarItem = {
+import logo from "../../logo.jpeg";
+
+import Image from "next/image";
+import Link from "next/link";
+
+
+
+interface NavbarItem {
   label: string;
-  dropdown?: string[];
-};
+  href?: string;
+  dropdown?: { label: string; href: string }[];
+}
 
 const NAV_ITEMS: NavbarItem[] = [
-  { label: "About Us" },
+  { label: "About Us", href: "/about-us" },
   {
-    label: "Insights",
-    dropdown: ["Blog", "Case Studies", "Whitepapers", "Webinars", "Newsletter"],
+    label: "Solutions",
+    dropdown: [
+      { label: "CRM", href: "/solutions/crm" },
+      { label: "Publishing", href: "/solutions/publishing" },
+    ],
   },
   {
     label: "Services",
     dropdown: [
-      "CRM Implementation",
-      "Data Migration",
-      "Custom Integrations",
-      "Training & Support",
-      "Consulting",
+      { label: "Low-code Application Development", href: "/services/low-code-application-development" },
     ],
   },
   {
-    label: "Contact Us",
-    dropdown: ["Sales", "Support", "Partnerships", "Press & Media"],
+    label: "Insights",
+    dropdown: [
+      { label: "Case Studies", href: "/insights/case-studies" },
+    ],
   },
+  { label: "Contact Us", href: "/contact-us" },
 ];
 
 function ChevronIcon({ open }: { open: boolean }) {
@@ -69,14 +79,18 @@ function NavItem({ item }: { item: NavbarItem }) {
     return () => document.removeEventListener("mousedown", handleClick);
   }, []);
 
+  // Simple link — no dropdown
   if (!item.dropdown) {
     return (
       <li className={styles.navitem}>
-        <button className={styles.navbtn}>{item.label}</button>
+        <Link href={item.href ?? "/"} className={styles.navbtn}>
+          {item.label}
+        </Link>
       </li>
     );
   }
 
+  // Dropdown item
   return (
     <li className={styles.navitem} ref={ref}>
       <button
@@ -87,11 +101,18 @@ function NavItem({ item }: { item: NavbarItem }) {
         {item.label}
         <ChevronIcon open={open} />
       </button>
+
       {open && (
         <ul className={styles.dropdown}>
           {item.dropdown.map((child) => (
-            <li key={child}>
-              <button className={styles.dropdownitem}>{child}</button>
+            <li key={child.href}>
+              <Link
+                href={child.href}
+                className={styles.dropdownitem}
+                onClick={() => setOpen(false)}
+              >
+                {child.label}
+              </Link>
             </li>
           ))}
         </ul>
@@ -129,12 +150,12 @@ export default function Navbar() {
 
   return (
     <nav className={styles.nav}>
-      {/* Logo — left */}
-      <div className={styles.logo}>
+      {/* Logo */}
+      <Link href="/" className={styles.logo}>
         <Image src={logo} height={20} alt="logo" />
-      </div>
+      </Link>
 
-      {/* Hamburger — visible only on mobile, outside .right */}
+      {/* Hamburger */}
       <button
         className={styles.menubtn}
         onClick={() => setMenuOpen((v) => !v)}
@@ -144,7 +165,7 @@ export default function Navbar() {
         {menuOpen ? "✕" : "☰"}
       </button>
 
-      {/* Right cluster — nav links + search */}
+      {/* Right cluster */}
       <div className={`${styles.right} ${menuOpen ? styles.rightopen : ""}`}>
         <ul className={styles.links}>
           {NAV_ITEMS.map((item) => (
