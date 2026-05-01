@@ -1,6 +1,7 @@
 "use client"
 import { useState } from "react"
 import styles from "./Form.module.css"
+import Footer from "../Bottom/Footer"
 
 export default function Form() {
   const [captchaChecked, setCaptchaChecked] = useState(false)
@@ -15,7 +16,8 @@ export default function Form() {
   }
 
   return (
-    <section className={styles.section}>
+     <>
+   <section className={styles.section}>
 
       {/* Left: heading + tagline */}
       <div className={styles.left}>
@@ -132,5 +134,8 @@ export default function Form() {
       </div>
 
     </section>
+    <Footer/>
+
+    </>
   )
 }
