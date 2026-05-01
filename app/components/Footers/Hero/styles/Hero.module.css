@@ -1,6 +1,6 @@
 .main {
     position: relative;
-    height:60vh;
+    height: 60vh;
     width: 100%;
     overflow: hidden;
 }
@@ -121,4 +121,53 @@
 .arrowRight::before {
     -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='9 18 15 12 9 6'/%3E%3C/svg%3E");
     mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='9 18 15 12 9 6'/%3E%3C/svg%3E");
+}
+
+
+
+
+
+@media (max-width: 475px) {
+
+
+    /* Text block */
+    .text {
+        position: absolute;
+
+        z-index: 2;
+        top: 50%;
+        left: 20%;
+        transform: translateY(-50%);
+        max-width: 200px;
+        color: white;
+    }
+
+    .text h1 {
+        font-size: 1.0rem;
+        font-weight: 600;
+        margin-bottom: 10px;
+    }
+
+    .text h2 {
+        font-size: 1rem;
+        font-weight: 500;
+        margin-bottom: 16px;
+        opacity: 0.9;
+    }
+
+    .text p {
+        font-size: 0.6rem;
+        line-height: 1.6;
+        margin-bottom: 10px;
+        opacity: 0.85;
+    }
+
+    .arrowLeft {
+        display: none;
+    }
+
+    .arrowRight {
+        display: none;
+    }
+
 }

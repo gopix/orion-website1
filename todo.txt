@@ -4,4 +4,5 @@
 * change the earth image to something suitable 
 * add text changing animations 
 * add capcha in the form 
-* add footer containg company contact info etc 
+* add footer containg company contact info etc
+* make it responsive for mobile devices
