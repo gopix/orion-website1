@@ -21,25 +21,25 @@
     top: 50%;
     left: 20%;
     transform: translateY(-50%);
-    max-width: 600px;
+    max-width: 1220px;
     color: white;
 }
 
 .text h1 {
-    font-size: 2.0rem;
-    font-weight: 600;
+    font-size: 3.5rem;
+    font-weight: 800;
     margin-bottom: 10px;
 }
 
 .text h2 {
-    font-size: 1.6rem;
+    font-size: 2.6rem;
     font-weight: 400;
     margin-bottom: 16px;
     opacity: 0.9;
 }
 
 .text p {
-    font-size: 1rem;
+    font-size: 1.5rem;
     line-height: 1.6;
     margin-bottom: 20px;
     opacity: 0.85;
@@ -170,4 +170,37 @@
         display: none;
     }
 
+}
+
+
+/* RIGHT → slides in from right */
+.slideRight {
+  animation: slideFromRight 0.5s ease;
+}
+
+@keyframes slideFromRight {
+  from {
+    opacity: 0;
+    transform: translate(60px, -50%);
+  }
+  to {
+    opacity: 1;
+    transform: translate(0, -50%);
+  }
+}
+
+/* LEFT → slides in from left */
+.slideLeft {
+  animation: slideFromLeft 0.5s ease;
+}
+
+@keyframes slideFromLeft {
+  from {
+    opacity: 0;
+    transform: translate(-60px, -50%);
+  }
+  to {
+    opacity: 1;
+    transform: translate(0, -50%);
+  }
 }

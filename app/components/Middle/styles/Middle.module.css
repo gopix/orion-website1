@@ -8,7 +8,7 @@
 /* LEFT SIDE */
 .left {
   flex: 1;
-  padding: 80px;
+  padding: 140px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -45,19 +45,20 @@
   object-fit: cover;
 }
 
-/* floating card */
+
 .card {
   position: absolute;
   width: 320px;
   height: 420px;
   top: 50%;
-  left: 20%;
+  left: -30%;
   transform: translateY(-50%);
   border-radius: 20px;
   overflow: hidden;
   box-shadow: 0 20px 60px rgba(0,0,0,0.5);
-}
 
+  z-index: 10; /* 👈 add this */
+}
 .cardImg {
   object-fit: cover;
 }

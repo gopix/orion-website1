@@ -54,15 +54,7 @@ export default function Middle() {
                     </div>
 
                     {/* floating card image */}
-                    <div className={styles.card}>
-                        <Image
-                            src={image1}
-                            alt="cloud"
-                            fill
-                            className={styles.cardImg}
-                        />
-                    </div>
-                </div>
+               </div>
             </section>
             <Portfolio />
 

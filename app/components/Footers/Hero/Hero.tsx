@@ -5,8 +5,8 @@ import Image from "next/image"
 import background from "./img/back.png"
 import styles from "./styles/Hero.module.css"
 
-
 import Info from "./Info"
+
 const HERO_CONTENT = [
     {
         title: "ORION Bits Systems Pvt. Ltd.",
@@ -21,31 +21,40 @@ const HERO_CONTENT = [
             "We help publishers move from fragmented workflows to structured, intelligent systems with real-time visibility and better decision-making.",
     },
     {
-        title: " 2 ORION Bits Systems Pvt. Ltd.",
+        title: "2 ORION Bits Systems Pvt. Ltd.",
         subtitle: "Intelligent Digital Systems for the Publishing Industry",
         description:
             "We help publishers move from fragmented workflows to structured, intelligent systems with real-time visibility and better decision-making.",
     }
 ];
 
-
 export default function Hero() {
     const [index, setIndex] = useState(0);
+    const [animate, setAnimate] = useState(true);
+    const [direction, setDirection] = useState("right");
+
     const item = HERO_CONTENT[index];
+    const triggerAnimation = () => {
+        setAnimate(false);
+        setTimeout(() => setAnimate(true), 50);
+    };
+
     const arrowRightClick = () => {
+        setDirection("right"); //  coming from right
         setIndex((prev) => (prev + 1) % HERO_CONTENT.length);
+        triggerAnimation();
     };
 
     const arrowLeftClick = () => {
+        setDirection("left"); //  coming from left
         setIndex((prev) =>
             (prev - 1 + HERO_CONTENT.length) % HERO_CONTENT.length
         );
+        triggerAnimation();
     };
     return (
         <>
-
             <div className={styles.main}>
-                {/* Background */}
                 <Image
                     fill
                     src={background}
@@ -53,19 +62,21 @@ export default function Hero() {
                     style={{ objectFit: "cover" }}
                     priority
                 />
-                {/* Dark overlay */}
 
                 <div className={styles.hero_content}>
+                    <button className={styles.arrowLeft} onClick={arrowLeftClick}></button>
+                    <button className={styles.arrowRight} onClick={arrowRightClick}></button>
 
-                    {/* Left Arrow */}
-                    <button className={styles.arrowLeft} onClick={arrowLeftClick}  ></button>
+                    {/* 👇 Apply animation class */}
 
-                    {/* Right Arrow */}
-                    <button className={styles.arrowRight} onClick={arrowRightClick}  ></button>
-
-                    {/* Content */}
-                    <div className={styles.text}>
-
+                    <div
+                        className={`${styles.text} ${animate
+                                ? direction === "right"
+                                    ? styles.slideRight
+                                    : styles.slideLeft
+                                : ""
+                            }`}
+                    >
                         <h1>{item.title}</h1>
                         <h2>{item.subtitle}</h2>
                         <p>{item.description}</p>

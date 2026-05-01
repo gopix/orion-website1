@@ -1,44 +1,38 @@
-
 .section {
   padding: 100px 40px;
-  background: #0f1115;
-  color: #e5e5e5;
+  background: #f7f9fc;
+  color: #1a1a1a;
   position: relative;
-    margin-top: 5px;
-    margin-bottom: 5px;
+  margin: 40px 0;
 }
-
-/* subtle gradient glow */
 .section::before {
   content: "";
   position: absolute;
   top: -100px;
   right: -100px;
-  width: 600px;
-  height: 600px;
+  width: 500px;
+  height: 500px;
   background: radial-gradient(
     circle,
-    rgba(0, 140, 255, 0.35),
     rgba(0, 140, 255, 0.15),
     transparent 70%
   );
-  filter: blur(120px);
-  z-index: 0;
+  filter: blur(100px);
 }
+
 .section::after {
   content: "";
   position: absolute;
   bottom: -120px;
   left: -100px;
-  width: 500px;
-  height: 500px;
+  width: 400px;
+  height: 400px;
   background: radial-gradient(
     circle,
-    rgba(0, 200, 255, 0.25),
+    rgba(0, 200, 255, 0.12),
     transparent 70%
   );
-  filter: blur(120px);
-  z-index: 0;
+  filter: blur(100px);
 }
 /* HEADER */
 .header {
@@ -51,41 +45,40 @@
 .header h2 {
   font-size: 42px;
   font-weight: 600;
-  color: #fff;
+  color: #111;
 }
 
 .header p {
   max-width: 500px;
-  color: #9aa0a6;
-  line-height: 1.6;
+  color: #555;
 }
-
 /* TABS */
 .tabs {
   display: flex;
   gap: 15px;
   margin-bottom: 40px;
 }
-
 .tabs button {
   padding: 10px 22px;
   border-radius: 30px;
-  border: 1px solid rgba(255,255,255,0.08);
-  background: transparent;
-  color: #aaa;
+  border: 1px solid #e5e7eb;
+  background: white;
+  color: #555;
   cursor: pointer;
   transition: all 0.3s ease;
 }
 
 .tabs button:hover {
-background: rgba(0, 140, 255, 0.08);
+  background: rgba(0, 140, 255, 0.08);
+  color: #007bff;
 }
 
 .active {
-    background: linear-gradient(135deg, #007bff, #00c6ff);
+  background: linear-gradient(135deg, #007bff, #00c6ff);
   color: white;
   border: none;
 }
+
 
 /* CARDS */
 .cards {
@@ -93,26 +86,25 @@ background: rgba(0, 140, 255, 0.08);
   grid-template-columns: 1fr 1fr;
   gap: 30px;
 }
-
-/* CARD STYLE */
 .card {
-  background: linear-gradient(145deg, #111317, #0c0e12);
- 
+  background: white;
   padding: 30px;
   border-radius: 18px;
-  border: 1px solid rgba(255,255,255,0.05);
-  color: #c9c9c9;
+  border: 1px solid #eaeaea;
+  color: #444;
   transition: all 0.3s ease;
   position: relative;
   overflow: hidden;
 }
-
-/* glow on hover */
 .card::before {
   content: "";
   position: absolute;
   inset: 0;
- background: radial-gradient(circle at top left, rgba(0, 180, 255, 0.35), transparent 70%);
+  background: radial-gradient(
+    circle at top left,
+    rgba(0, 140, 255, 0.15),
+    transparent 70%
+  );
   opacity: 0;
   transition: 0.3s;
 }
@@ -120,26 +112,22 @@ background: rgba(0, 140, 255, 0.08);
 .card:hover::before {
   opacity: 1;
 }
-
 .card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+}
+.card h3 {
+  color: #111;
 }
 
-.card h3 {
-  color: #fff;
-  margin-bottom: 12px;
+.card span {
+  color: #007bff;
 }
+
 
 .card p {
   line-height: 1.6;
   margin-bottom: 20px;
-}
-
-.card span {
-  color: #aaa;
-  font-size: 14px;
-  cursor: pointer;
 }
 
 /* RESPONSIVE */
