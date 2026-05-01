@@ -14,7 +14,7 @@ interface HeroSlide {
 const HERO_CONTENT: HeroSlide[] = [
     {
         title: "ORION Bits Systems Pvt. Ltd.",
-        subtitle: "Intelligent Digital Systems for the Publishing Industry",
+        subtitle: "AI, Automation & Content Engineering Solutions",
         description:
             "We help publishers move from fragmented workflows to structured, intelligent systems with real-time visibility and better decision-making.",
     },
@@ -92,6 +92,7 @@ export default function Hero() {
                     <p>{item.description}</p>
                     <button className={styles.cta}>Learn More</button>
                 </div>
+                {/*
 
                 <div className={styles.dots}>
                     {HERO_CONTENT.map((_, i) => (
@@ -103,6 +104,7 @@ export default function Hero() {
                         />
                     ))}
                 </div>
+                */}
             </div>
             <Info />
         </>

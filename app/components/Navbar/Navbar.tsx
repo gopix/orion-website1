@@ -29,7 +29,7 @@ const NAV_ITEMS: NavbarItem[] = [
   {
     label: "Services",
     dropdown: [
-      { label: "Low-code Application Development", href: "/services/low-code-application-development" },
+      { label: "Custom Application Development", href: "/services/low-code-application-development" },
     ],
   },
   {

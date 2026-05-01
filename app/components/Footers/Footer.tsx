@@ -21,7 +21,7 @@ export default function Footer() {
                     <Image src={logo} alt="ORION Logo" width={160} height={60} />
 
                     <p className={styles.tagline}>
-                        Intelligent Digital Systems for Publishing
+                    AI, Automation & Content Engineering Solutions    
                     </p>
 
                     <h4>Follow Us</h4>
@@ -65,10 +65,10 @@ export default function Footer() {
                 <div className={styles.col}>
                     <h3>Industries</h3>
                     <ul>
-                        <li>Publishing</li>
-                        <li>Distribution</li>
-                        <li>Content Businesses</li>
-                        <li>Manufacturing</li>
+                        <li>Publishing & Content Services</li>
+                        <li>Education & EdTech </li>
+                        <li>Technology & Startups</li>
+                        <li>Enterprise & SMEs</li>
                     </ul>
                 </div>
 
