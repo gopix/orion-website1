@@ -54,7 +54,6 @@ export default function Hero() {
                     priority
                 />
                 {/* Dark overlay */}
-                <div className={styles.overlay} />
 
                 <div className={styles.hero_content}>
 
