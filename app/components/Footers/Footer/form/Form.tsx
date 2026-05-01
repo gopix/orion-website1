@@ -5,7 +5,7 @@ import styles from "./Form.module.css"
 export default function Form() {
   const [captchaChecked, setCaptchaChecked] = useState(false)
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e:React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
     if (!captchaChecked) {
       alert("Please confirm you are not a robot.")
