@@ -1,7 +1,7 @@
 .section {
   background: url('/form_image.png') center center / cover no-repeat;
   width: 100%;
-  min-height: 600px;
+  min-height: 800px;
   position: relative;
   display: flex;
   align-items: center;
@@ -10,7 +10,13 @@
   font-family: 'Sora', sans-serif;
   overflow: hidden;
 }
-
+.error {
+    display: block;
+    color: #e53e3e;
+    font-size: 0.75rem;
+    margin-top: 4px;
+    padding-left: 2px;
+}
 .section::before {
   content: '';
   position: absolute;
