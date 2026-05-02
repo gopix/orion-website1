@@ -18,7 +18,7 @@ interface NavbarItem {
 }
 
 const NAV_ITEMS: NavbarItem[] = [
-  { label: "About Us", href: "/about-us" },
+  { label: "About Us", href: "/" },
   {
     label: "Solutions",
     dropdown: [

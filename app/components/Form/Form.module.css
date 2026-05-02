@@ -1,15 +1,15 @@
 .section {
-  background: url('/form_image.png') center center / cover no-repeat;
-  width: 100%;
-  min-height: 800px;
-  position: relative;
-  display: flex;
-  align-items: center;
-  padding: 60px;
-  box-sizing: border-box;
-  font-family: 'Sora', sans-serif;
-  overflow: hidden;
+    width: 100%;
+    min-height: 800px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 60px;
+    box-sizing: border-box;
+    font-family: 'Sora', sans-serif;
+    overflow: hidden;
 }
+
 .error {
     display: block;
     color: #e53e3e;
@@ -17,231 +17,239 @@
     margin-top: 4px;
     padding-left: 2px;
 }
+
 .section::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(120deg, rgba(8, 14, 60, 0.82) 0%, rgba(10, 20, 80, 0.65) 50%, rgba(5, 10, 40, 0.55) 100%);
-  z-index: 0;
+    content: '';
+    position: absolute;
+    inset: 0;
+
+    background: linear-gradient(120deg,
+            #0a0f2c 0%,
+            #0f1e4d 50%,
+            #081233 100%);
+
+    z-index: 0;
 }
 
 .left {
-  flex: 1;
-  position: relative;
-  z-index: 1;
-  padding-right: 40px;
+    flex: 1;
+    position: relative;
+    z-index: 1;
+    padding-right: 40px;
 }
 
 .left h2 {
-  font-size: 2.4rem;
-  font-weight: 700;
-  color: #ffffff;
-  margin: 0 0 16px;
-  line-height: 1.2;
+    font-size: 2.4rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin: 0 0 16px;
+    line-height: 1.2;
 }
 
 .left p {
-  font-size: 1rem;
-  color: rgba(255, 255, 255, 0.75);
-  line-height: 1.6;
-  margin: 0;
-  font-weight: 500;
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.75);
+    line-height: 1.6;
+    margin: 0;
+    font-weight: 500;
 }
 
 .formCard {
-  position: relative;
-  z-index: 1;
-  width: 580px;
-  flex-shrink: 0;
-  background: rgba(10, 20, 70, 0.78);
-  border: 1px solid rgba(100, 140, 255, 0.2);
-  border-radius: 14px;
-  padding: 36px 32px 32px;
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
+    position: relative;
+    z-index: 1;
+    width: 580px;
+    flex-shrink: 0;
+    background: rgba(10, 20, 70, 0.78);
+    border: 1px solid rgba(100, 140, 255, 0.2);
+    border-radius: 14px;
+    padding: 36px 32px 32px;
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
 }
 
 .formCard h3 {
-  text-align: center;
-  color: #fff;
-  font-size: 1.05rem;
-  font-weight: 600;
-  margin: 0 0 24px;
-  letter-spacing: 0.03em;
+    text-align: center;
+    color: #fff;
+    font-size: 1.05rem;
+    font-weight: 600;
+    margin: 0 0 24px;
+    letter-spacing: 0.03em;
 }
 
 .grid2 {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 12px;
-  margin-bottom: 12px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-bottom: 12px;
 }
 
 .fullRow {
-  margin-bottom: 12px;
+    margin-bottom: 12px;
 }
 
 .field {
-  display: flex;
-  flex-direction: column;
+    display: flex;
+    flex-direction: column;
 }
 
 .field input,
 .field select,
 .field textarea {
-  background: rgba(220, 228, 255, 0.12);
-  border: 1px solid rgba(130, 160, 255, 0.25);
-  border-radius: 6px;
-  padding: 11px 14px;
-  font-size: 0.875rem;
-  color: #fff;
-  font-family: 'Sora', sans-serif;
-  outline: none;
-  transition: border-color 0.2s, background 0.2s;
-  width: 100%;
-  box-sizing: border-box;
+    background: rgba(220, 228, 255, 0.12);
+    border: 1px solid rgba(130, 160, 255, 0.25);
+    border-radius: 6px;
+    padding: 11px 14px;
+    font-size: 0.875rem;
+    color: #fff;
+    font-family: 'Sora', sans-serif;
+    outline: none;
+    transition: border-color 0.2s, background 0.2s;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .field input::placeholder,
 .field textarea::placeholder {
-  color: rgba(200, 210, 255, 0.55);
+    color: rgba(200, 210, 255, 0.55);
 }
 
 .field select {
-  color: rgba(200, 210, 255, 0.55);
-  appearance: none;
-  -webkit-appearance: none;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='rgba(160,180,255,0.7)' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");
-  background-repeat: no-repeat;
-  background-position: right 12px center;
-  padding-right: 32px;
-  cursor: pointer;
+    color: rgba(200, 210, 255, 0.55);
+    appearance: none;
+    -webkit-appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='rgba(160,180,255,0.7)' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+    padding-right: 32px;
+    cursor: pointer;
 }
 
 .field select option {
-  background: #0d1a5e;
-  color: #fff;
+    background: #0d1a5e;
+    color: #fff;
 }
 
 .field input:focus,
 .field select:focus,
 .field textarea:focus {
-  border-color: rgba(100, 150, 255, 0.65);
-  background: rgba(220, 228, 255, 0.16);
+    border-color: rgba(100, 150, 255, 0.65);
+    background: rgba(220, 228, 255, 0.16);
 }
 
 .field textarea {
-  resize: vertical;
-  min-height: 90px;
+    resize: vertical;
+    min-height: 90px;
 }
 
 .captchaRow {
-  display: flex;
-  justify-content: center;
-  margin: 16px 0;
+    display: flex;
+    justify-content: center;
+    margin: 16px 0;
 }
 
 .captchaBox {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  background: #f9f9f9;
-  border: 1px solid #d3d3d3;
-  border-radius: 4px;
-  padding: 12px 16px;
-  width: 260px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: #f9f9f9;
+    border: 1px solid #d3d3d3;
+    border-radius: 4px;
+    padding: 12px 16px;
+    width: 260px;
 }
 
 .captchaCheckbox {
-  width: 22px;
-  height: 22px;
-  border: 2px solid #aaa;
-  border-radius: 3px;
-  flex-shrink: 0;
-  cursor: pointer;
-  appearance: none;
-  -webkit-appearance: none;
-  background: #fff;
-  transition: background 0.2s, border-color 0.2s;
+    width: 22px;
+    height: 22px;
+    border: 2px solid #aaa;
+    border-radius: 3px;
+    flex-shrink: 0;
+    cursor: pointer;
+    appearance: none;
+    -webkit-appearance: none;
+    background: #fff;
+    transition: background 0.2s, border-color 0.2s;
 }
 
 .captchaCheckbox:checked {
-  background: #1a73e8;
-  border-color: #1a73e8;
+    background: #1a73e8;
+    border-color: #1a73e8;
 }
 
 .captchaLabel {
-  font-size: 0.85rem;
-  color: #333;
-  font-family: 'Roboto', sans-serif;
+    font-size: 0.85rem;
+    color: #333;
+    font-family: 'Roboto', sans-serif;
 }
 
 .captchaBadge {
-  margin-left: auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 2px;
+    margin-left: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
 }
 
 .captchaBadge svg {
-  width: 32px;
-  height: 32px;
+    width: 32px;
+    height: 32px;
 }
 
 .captchaBadge span {
-  font-size: 0.6rem;
-  color: #777;
-  font-family: 'Roboto', sans-serif;
+    font-size: 0.6rem;
+    color: #777;
+    font-family: 'Roboto', sans-serif;
 }
 
 .submitRow {
-  display: flex;
-  justify-content: center;
-  margin-top: 4px;
+    display: flex;
+    justify-content: center;
+    margin-top: 4px;
 }
 
 .submitBtn {
-  background: #1a5fd4;
-  color: #fff;
-  border: none;
-  border-radius: 6px;
-  padding: 12px 48px;
-  font-size: 0.95rem;
-  font-weight: 600;
-  font-family: 'Sora', sans-serif;
-  cursor: pointer;
-  letter-spacing: 0.03em;
-  transition: background 0.2s, transform 0.15s;
+    background: #1a5fd4;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 12px 48px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    font-family: 'Sora', sans-serif;
+    cursor: pointer;
+    letter-spacing: 0.03em;
+    transition: background 0.2s, transform 0.15s;
 }
 
 .submitBtn:hover {
-  background: #1450b8;
-  transform: translateY(-1px);
+    background: #1450b8;
+    transform: translateY(-1px);
 }
 
 .submitBtn:active {
-  transform: translateY(0);
+    transform: translateY(0);
 }
 
 /* Responsive */
 @media (max-width: 1000px) {
-  .section {
-    flex-direction: column;
-    padding: 48px 24px;
-    gap: 40px;
-    align-items: flex-start;
-  }
-  .left {
-    padding-right: 0;
-  }
-  .formCard {
-    width: 100%;
-  }
+    .section {
+        flex-direction: column;
+        padding: 48px 24px;
+        gap: 40px;
+        align-items: flex-start;
+    }
+
+    .left {
+        padding-right: 0;
+    }
+
+    .formCard {
+        width: 100%;
+    }
 }
 
 @media (max-width: 560px) {
-  .grid2 {
-    grid-template-columns: 1fr;
-  }
+    .grid2 {
+        grid-template-columns: 1fr;
+    }
 }
