@@ -1,109 +1,73 @@
-"use client"
-import Image, { StaticImageData } from "next/image"
-import styles from "./styles/Info.module.css"
-import info_image from "./img/info_image.png"
-import info_image2 from "./img/info_image2.png"
+"use client";
 
-interface InfoImageProps {
-    src: StaticImageData
-    alt?: string
+import Image, { StaticImageData } from "next/image";
+import styles from "./styles/Info.module.css";
+
+interface InfoBlock {
+  image: StaticImageData;
+  imageAlt?: string;
+  heading: React.ReactNode;
+  body: string;
+
+  philosophyTitle: React.ReactNode;
+  philosophyText: string;
+
+  reverse?: boolean; // image right / left
 }
 
-interface InfoCardProps {
-    heading: React.ReactNode
-    body: string
+interface InfoProps {
+  blocks: InfoBlock[];
 }
 
-function InfoImage({ src, alt = "image" }: InfoImageProps) {
-    return (
-        <div className={styles.imageWrap}>
-            <Image src={src} alt={alt} />
-        </div>
-    )
-}
-
-function InfoCard({ heading, body }: InfoCardProps) {
-    return (
-        <div className={styles.card}>
-            <h2>{heading}</h2>
-            <p>{body}</p>
-        </div>
-    )
-}
-
-export default function Info() {
-    return (
-    
-<section className={styles.section}>
-
-    <div className={styles.block}>
-        <div className={styles.topRow}>
-            <InfoImage
-                src={info_image}
-                alt="Publishing industry technology"
-            />
-            <InfoCard
-                heading={
-                    <>
-                        Intelligent Digital Systems<br />
-                        for the Publishing Industry
-                    </>
-                }
-                body="ORION Bits Systems is a technology company focused on building intelligent digital systems for the publishing industry. We help publishers move from fragmented operations and manual workflows to structured systems, real-time visibility, and better decision-making—without disrupting their existing tools. As an intelligence layer on top of your current ecosystem, we deliver clarity, consistency, and control through precision—not complexity."
-            />
-        </div>
-        <div className={styles.philosophy}>
-            <div className={styles.philLeft}>
-                <h3>
-                    ORION&apos;s Philosophy<br />
-                    is to deliver <span>CLARITY</span>
-                </h3>
-            </div>
-            <div className={styles.philDivider} />
-            <div className={styles.philRight}>
-                <p>
-                    ORION&apos;s foundation is built upon <strong>intelligence and precision</strong>,
-                    guiding us to provide results-driven publishing systems that propel our clients
-                    towards structured, scalable growth.
-                </p>
-            </div>
-        </div>
+function InfoImage({ src, alt = "image" }: { src: StaticImageData; alt?: string }) {
+  return (
+    <div className={styles.imageWrap}>
+      <Image src={src} alt={alt} />
     </div>
+  );
+}
 
-    <div className={styles.block}>
-        <div className={styles.topRow}>
-            <InfoCard
-                heading={
-                    <>
-                        Zoho-Powered Business Systems<br />
-                        for Growing Organizations
-                    </>
-                }
-                body="We help businesses implement structured digital systems using Zoho to streamline operations and improve efficiency. From CRM setup and sales automation to inventory management and custom reporting dashboards — ORION configures and connects your tools so your team spends less time on manual work and more time on what matters. Built for publishers, distributors, and content-driven businesses across India."
-            />
-            <InfoImage
-                src={info_image2}
-                alt="Data-driven publishing workflows"
-            />
-        </div>
-        <div className={styles.philosophy}>
-            <div className={styles.philLeft}>
-                <h3>
-                    Two Verticals,<br />
-                    One Connected <span>SYSTEM</span>
-                </h3>
-            </div>
-            <div className={styles.philDivider} />
-            <div className={styles.philRight}>
-                <p>
-                    Our <strong>Business Systems Implementation</strong> builds the operational foundation,
-                    while the ORION Platform adds the intelligence layer on top — giving your publishing
-                    business complete visibility, from submission to sale.
-                </p>
-            </div>
-        </div>
+function InfoCard({ heading, body }: { heading: React.ReactNode; body: string }) {
+  return (
+    <div className={styles.card}>
+      <h2>{heading}</h2>
+      <p>{body}</p>
     </div>
+  );
+}
 
-</section>
-    )
+export default function Info({ blocks }: InfoProps) {
+  return (
+    <section className={styles.section}>
+      {blocks.map((block, i) => (
+        <div className={styles.block} key={i}>
+          
+          <div className={styles.topRow}>
+            {!block.reverse && (
+              <InfoImage src={block.image} alt={block.imageAlt} />
+            )}
+
+            <InfoCard heading={block.heading} body={block.body} />
+
+            {block.reverse && (
+              <InfoImage src={block.image} alt={block.imageAlt} />
+            )}
+          </div>
+
+          <div className={styles.philosophy}>
+            <div className={styles.philLeft}>
+              <h3>{block.philosophyTitle}</h3>
+            </div>
+
+            <div className={styles.philDivider} />
+
+            <div className={styles.philRight}>
+              <p>{block.philosophyText}</p>
+            </div>
+          </div>
+
+        </div>
+      ))}
+    </section>
+  );
 }

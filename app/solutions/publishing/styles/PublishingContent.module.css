@@ -1,0 +1,112 @@
+.section {
+    position: relative;
+    padding: 80px 6%;
+    background: #ffffff;
+    overflow: hidden;
+}
+
+/* dot grids */
+.dotGridLeft,
+.dotGridRight {
+    position: absolute;
+    top: 0;
+    width: 180px;
+    height: 80px;
+    background-image: radial-gradient(circle, #c8d9f7 1.5px, transparent 1.5px);
+    background-size: 14px 14px;
+    opacity: 0.7;
+}
+
+.dotGridLeft { left: 0; }
+.dotGridRight { right: 0; }
+
+/* header */
+.header {
+    display: flex;
+    gap: 60px;
+    margin-bottom: 48px;
+}
+
+.heading {
+    font-size: 2.2rem;
+    font-weight: 800;
+    color: #0d1b2a;
+}
+
+.subtext {
+    color: #4a5568;
+    line-height: 1.7;
+}
+
+/* grid */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 28px;
+}
+
+/* card */
+.card {
+    background: #ffffff;
+    border: 1.5px solid #e2eaf6;
+    border-radius: 14px;
+    padding: 30px;
+    transition: 0.25s ease;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 30px rgba(26,117,255,0.1);
+}
+
+/* subtitle */
+.cardSubtitle {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #1a75ff;
+    margin-bottom: 10px;
+}
+
+/* text */
+.cardDesc {
+    color: #4a5568;
+    line-height: 1.7;
+}
+
+/* list */
+.list {
+    padding-left: 16px;
+    color: #4a5568;
+    line-height: 1.8;
+}
+
+/* inner mini boxes */
+.innerBox {
+    background: #f4f7fb;
+    border-radius: 10px;
+    padding: 14px;
+    margin-top: 10px;
+}
+
+.innerBox h3 {
+    margin: 0;
+    font-size: 0.95rem;
+    color: #0d1b2a;
+}
+
+.innerBox p {
+    margin: 0;
+    font-size: 0.85rem;
+    color: #4a5568;
+}
+
+/* responsive */
+@media (max-width: 768px) {
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    .header {
+        flex-direction: column;
+    }
+}
