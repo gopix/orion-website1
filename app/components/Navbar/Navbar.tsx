@@ -23,13 +23,13 @@ const NAV_ITEMS: NavbarItem[] = [
         label: "Solutions",
         dropdown: [
             { label: "Publishing", href: "/solutions/publishing" },
-            { label: "CRM", href: "/solutions/crm" },
+            { label: "CRM", href: "/solutions/CRM" },
         ],
     },
     {
         label: "Services",
         dropdown: [
-            { label: "Custom Application Development", href: "/services/low-code-application-development" },
+            { label: "Custom Application Development", href: "/services/coustom-app-dev" },
         ],
     },
     {

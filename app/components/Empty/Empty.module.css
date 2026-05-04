@@ -1,0 +1,69 @@
+.wrapper {
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* ── Dot grid + gradient background ── */
+    background-color: #f0f4fb;
+    background-image:
+        radial-gradient(ellipse at 0% 0%, #dce8fb 0%, transparent 55%),
+        radial-gradient(circle, #b0c4de 1px, transparent 1px);
+    background-size: auto, 22px 24px;
+    background-position: top left, top left;
+}
+
+
+.card {
+    text-align: center;
+    padding: 48px 36px;
+
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(16px);
+
+    border-radius: 16px;
+    border: 1px solid rgba(0, 0, 0, 0.06);
+
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+
+    max-width: 420px;
+    width: 100%;
+}
+
+.icon {
+    font-size: 2.5rem;
+    margin-bottom: 16px;
+}
+
+.title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #0f172a;
+    margin-bottom: 12px;
+}
+
+.message {
+    font-size: 0.95rem;
+    color: #475569;
+    margin-bottom: 24px;
+    line-height: 1.6;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+
+    background: linear-gradient(135deg, #2563eb, #1d4ed8);
+    color: #fff;
+
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 8px 18px rgba(37, 99, 235, 0.3);
+}
