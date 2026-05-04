@@ -29,7 +29,7 @@ const NAV_ITEMS: NavbarItem[] = [
     {
         label: "Services",
         dropdown: [
-            { label: "Custom Application Development", href: "/services/coustom-app-dev" },
+            { label: "AI & Intelligent Systems Development", href: "/services/ai-system-dev" },
         ],
     },
     {

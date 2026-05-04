@@ -2,11 +2,11 @@ import Navbar from "@/app/components/Navbar/Navbar";
 import Footer from "@/app/components/Footers/Footer";
 import Hero, { HeroSlide } from "@/app/components/Hero/Hero";
 
-import styles from "./styles/publishing.module.css";
 import Info from "@/app/components/Hero/Info";
 
 import bg from "./images/bg.png";
-
+import image1 from "./images/image1.png"
+import image2 from "./images/image2.png"
 
 
 import PublishingContent from "./PublishingContent";
@@ -21,7 +21,7 @@ const slides: HeroSlide[] = [
 ];
 const InfoBlocks= [
   {
-    image: bg,
+    image: image1,
     imageAlt: "Publishing workflow systems",
 
     heading: (
@@ -48,7 +48,7 @@ const InfoBlocks= [
   },
 
   {
-    image: bg,
+    image: image2,
     imageAlt: "Publishing platform intelligence",
     reverse: true,
 

@@ -1,0 +1,106 @@
+.container {
+  width: 85%;
+  margin: auto;
+  padding: 80px 0;
+}
+
+/* SECTION TITLE */
+.title {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 20px;
+}
+
+/* GENERAL SECTION */
+.section {
+  margin-bottom: 60px;
+}
+
+/* DESCRIPTION */
+.desc {
+  color: #475569;
+  max-width: 700px;
+  line-height: 1.7;
+}
+
+/* PILLS (TOP SECTION) */
+.pillGrid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.pill {
+  padding: 10px 16px;
+  border-radius: 999px;
+  background: #f1f5f9;
+  border: 1px solid #e2e8f0;
+  font-size: 0.85rem;
+  transition: 0.2s ease;
+}
+
+.pill:hover {
+  background: #e2e8f0;
+}
+
+/* CARD SECTIONS */
+.cardSection {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  padding: 28px;
+  margin-bottom: 30px;
+}
+
+.cardSection h2 {
+  font-size: 1.2rem;
+  margin-bottom: 12px;
+  color: #0f172a;
+}
+
+/* LIST */
+.list {
+  padding-left: 18px;
+  line-height: 1.9;
+  color: #475569;
+}
+
+/* GRID */
+.grid2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+/* CTA */
+.cta {
+  margin-top: 60px;
+  background: linear-gradient(135deg, #0a2540, #0f3a66);
+  color: white;
+  padding: 60px 20px;
+  text-align: center;
+  border-radius: 16px;
+}
+
+.btn {
+  margin-top: 20px;
+  padding: 12px 28px;
+  background: linear-gradient(135deg, #2563eb, #1d4ed8);
+  border: none;
+  border-radius: 8px;
+  color: white;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .grid2 {
+    grid-template-columns: 1fr;
+  }
+}
