@@ -79,20 +79,19 @@ export default function Hero() {
                 <button className={styles.arrowRight} onClick={arrowRightClick} aria-label="Next slide" />
 
                 <div
-                    className={`${styles.text} ${
-                        animate
+                    className={`${styles.text} ${animate
                             ? direction === "right"
                                 ? styles.slideRight
                                 : styles.slideLeft
                             : ""
-                    }`}
+                        }`}
                 >
                     <h1>{item.title}</h1>
                     <h2>{item.subtitle}</h2>
                     <p>{item.description}</p>
                     <button className={styles.cta}>Learn More</button>
                 </div>
-                {/*
+
 
                 <div className={styles.dots}>
                     {HERO_CONTENT.map((_, i) => (
@@ -104,7 +103,7 @@ export default function Hero() {
                         />
                     ))}
                 </div>
-                */}
+
             </div>
             <Info />
         </>

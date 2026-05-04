@@ -12,185 +12,185 @@ import Link from "next/link";
 
 
 interface NavbarItem {
-  label: string;
-  href?: string;
-  dropdown?: { label: string; href: string }[];
+    label: string;
+    href?: string;
+    dropdown?: { label: string; href: string }[];
 }
 
 const NAV_ITEMS: NavbarItem[] = [
-  { label: "About Us", href: "/" },
-  {
-    label: "Solutions",
-    dropdown: [
-      { label: "CRM", href: "/solutions/crm" },
-      { label: "Publishing", href: "/solutions/publishing" },
-    ],
-  },
-  {
-    label: "Services",
-    dropdown: [
-      { label: "Custom Application Development", href: "/services/low-code-application-development" },
-    ],
-  },
-  {
-    label: "Insights",
-    dropdown: [
-      { label: "Case Studies", href: "/insights/case-studies" },
-    ],
-  },
-  { label: "Contact Us", href: "/contact-us" },
+    { label: "About Us", href: "/" },
+    {
+        label: "Solutions",
+        dropdown: [
+            { label: "Publishing", href: "/solutions/publishing" },
+            { label: "CRM", href: "/solutions/crm" },
+        ],
+    },
+    {
+        label: "Services",
+        dropdown: [
+            { label: "Custom Application Development", href: "/services/low-code-application-development" },
+        ],
+    },
+    {
+        label: "Insights",
+        dropdown: [
+            { label: "Case Studies", href: "/insights/case-studies" },
+        ],
+    },
+    { label: "Contact Us", href: "/contact-us" },
 ];
 
 function ChevronIcon({ open }: { open: boolean }) {
-  return (
-    <svg
-      width="12"
-      height="12"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2.5"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      style={{
-        transform: open ? "rotate(180deg)" : "rotate(0deg)",
-        transition: "transform 200ms ease",
-        marginLeft: 3,
-        flexShrink: 0,
-      }}
-    >
-      <polyline points="6 9 12 15 18 9" />
-    </svg>
-  );
+    return (
+        <svg
+            width="12"
+            height="12"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2.5"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            style={{
+                transform: open ? "rotate(180deg)" : "rotate(0deg)",
+                transition: "transform 200ms ease",
+                marginLeft: 3,
+                flexShrink: 0,
+            }}
+        >
+            <polyline points="6 9 12 15 18 9" />
+        </svg>
+    );
 }
 
 function NavItem({ item }: { item: NavbarItem }) {
-  const [open, setOpen] = useState(false);
-  const ref = useRef<HTMLLIElement | null>(null);
+    const [open, setOpen] = useState(false);
+    const ref = useRef<HTMLLIElement | null>(null);
 
-  useEffect(() => {
-    function handleClick(e: MouseEvent) {
-      if (!ref.current) return;
-      if (e.target instanceof Node && !ref.current.contains(e.target)) {
-        setOpen(false);
-      }
-    }
-    document.addEventListener("mousedown", handleClick);
-    return () => document.removeEventListener("mousedown", handleClick);
-  }, []);
+    useEffect(() => {
+        function handleClick(e: MouseEvent) {
+            if (!ref.current) return;
+            if (e.target instanceof Node && !ref.current.contains(e.target)) {
+                setOpen(false);
+            }
+        }
+        document.addEventListener("mousedown", handleClick);
+        return () => document.removeEventListener("mousedown", handleClick);
+    }, []);
 
-  // Simple link — no dropdown
-  if (!item.dropdown) {
-    return (
-      <li className={styles.navitem}>
-        <Link href={item.href ?? "/"} className={styles.navbtn}>
-          {item.label}
-        </Link>
-      </li>
-    );
-  }
-
-  // Dropdown item
-  return (
-    <li className={styles.navitem} ref={ref}>
-      <button
-        className={`${styles.navbtn} ${open ? styles.navbtnactive : ""}`}
-        onClick={() => setOpen((v) => !v)}
-        aria-expanded={open}
-      >
-        {item.label}
-        <ChevronIcon open={open} />
-      </button>
-
-      {open && (
-        <ul className={styles.dropdown}>
-          {item.dropdown.map((child) => (
-            <li key={child.href}>
-              <Link
-                href={child.href}
-                className={styles.dropdownitem}
-                onClick={() => setOpen(false)}
-              >
-                {child.label}
-              </Link>
+    // Simple link — no dropdown
+    if (!item.dropdown) {
+        return (
+            <li className={styles.navitem}>
+                <Link href={item.href ?? "/"} className={styles.navbtn}>
+                    {item.label}
+                </Link>
             </li>
-          ))}
-        </ul>
-      )}
-    </li>
-  );
+        );
+    }
+
+    // Dropdown item
+    return (
+        <li className={styles.navitem} ref={ref}>
+            <button
+                className={`${styles.navbtn} ${open ? styles.navbtnactive : ""}`}
+                onClick={() => setOpen((v) => !v)}
+                aria-expanded={open}
+            >
+                {item.label}
+                <ChevronIcon open={open} />
+            </button>
+
+            {open && (
+                <ul className={styles.dropdown}>
+                    {item.dropdown.map((child) => (
+                        <li key={child.href}>
+                            <Link
+                                href={child.href}
+                                className={styles.dropdownitem}
+                                onClick={() => setOpen(false)}
+                            >
+                                {child.label}
+                            </Link>
+                        </li>
+                    ))}
+                </ul>
+            )}
+        </li>
+    );
 }
 
 function SearchIcon() {
-  return (
-    <svg
-      width="18"
-      height="18"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    >
-      <circle cx="11" cy="11" r="8" />
-      <line x1="21" y1="21" x2="16.65" y2="16.65" />
-    </svg>
-  );
+    return (
+        <svg
+            width="18"
+            height="18"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+        >
+            <circle cx="11" cy="11" r="8" />
+            <line x1="21" y1="21" x2="16.65" y2="16.65" />
+        </svg>
+    );
 }
 
 export default function Navbar() {
-  const [menuOpen, setMenuOpen] = useState(false);
-  const [searchOpen, setSearchOpen] = useState(false);
-  const searchRef = useRef<HTMLInputElement | null>(null);
+    const [menuOpen, setMenuOpen] = useState(false);
+    const [searchOpen, setSearchOpen] = useState(false);
+    const searchRef = useRef<HTMLInputElement | null>(null);
 
-  useEffect(() => {
-    if (searchOpen) searchRef.current?.focus();
-  }, [searchOpen]);
+    useEffect(() => {
+        if (searchOpen) searchRef.current?.focus();
+    }, [searchOpen]);
 
-  return (
-    <nav className={styles.nav}>
-      {/* Logo */}
-      <Link href="/" className={styles.logo}>
-        <Image src={logo} height={20} alt="logo" />
-      </Link>
+    return (
+        <nav className={styles.nav}>
+            {/* Logo */}
+            <Link href="/" className={styles.logo}>
+                <Image src={logo} height={20} alt="logo" />
+            </Link>
 
-      {/* Hamburger */}
-      <button
-        className={styles.menubtn}
-        onClick={() => setMenuOpen((v) => !v)}
-        aria-label="Toggle menu"
-        aria-expanded={menuOpen}
-      >
-        {menuOpen ? "✕" : "☰"}
-      </button>
+            {/* Hamburger */}
+            <button
+                className={styles.menubtn}
+                onClick={() => setMenuOpen((v) => !v)}
+                aria-label="Toggle menu"
+                aria-expanded={menuOpen}
+            >
+                {menuOpen ? "✕" : "☰"}
+            </button>
 
-      {/* Right cluster */}
-      <div className={`${styles.right} ${menuOpen ? styles.rightopen : ""}`}>
-        <ul className={styles.links}>
-          {NAV_ITEMS.map((item) => (
-            <NavItem key={item.label} item={item} />
-          ))}
-        </ul>
+            {/* Right cluster */}
+            <div className={`${styles.right} ${menuOpen ? styles.rightopen : ""}`}>
+                <ul className={styles.links}>
+                    {NAV_ITEMS.map((item) => (
+                        <NavItem key={item.label} item={item} />
+                    ))}
+                </ul>
 
-        <div className={styles.searchwrapper}>
-          {searchOpen && (
-            <input
-              ref={searchRef}
-              className={styles.searchinput}
-              placeholder="Search…"
-              onBlur={() => setSearchOpen(false)}
-            />
-          )}
-          <button
-            className={styles.iconbtn}
-            onClick={() => setSearchOpen((v) => !v)}
-            aria-label="Search"
-          >
-            <SearchIcon />
-          </button>
-        </div>
-      </div>
-    </nav>
-  );
+                <div className={styles.searchwrapper}>
+                    {searchOpen && (
+                        <input
+                            ref={searchRef}
+                            className={styles.searchinput}
+                            placeholder="Search…"
+                            onBlur={() => setSearchOpen(false)}
+                        />
+                    )}
+                    <button
+                        className={styles.iconbtn}
+                        onClick={() => setSearchOpen((v) => !v)}
+                        aria-label="Search"
+                    >
+                        <SearchIcon />
+                    </button>
+                </div>
+            </div>
+        </nav>
+    );
 }

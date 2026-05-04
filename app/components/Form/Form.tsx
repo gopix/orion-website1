@@ -155,7 +155,7 @@ export default function Form() {
             </div>
 
             <div className={styles.formCard}>
-                <h3>Get in Touch</h3>
+                <h3 >Get in Touch</h3>
                 <form onSubmit={handleSubmit} noValidate>
 
                     <div className={styles.grid2}>

@@ -8,6 +8,17 @@
     box-sizing: border-box;
     font-family: 'Sora', sans-serif;
     overflow: hidden;
+
+     color: #0f172a;
+   background-color: #f0f4fb;
+
+    background-image:
+        radial-gradient(ellipse at 0% 0%, #dce8fb 0%, transparent 55%),
+        radial-gradient(circle, #b0c4de 1px, transparent 1px);
+    background-size: auto, 22px 22px;
+    background-position: top left, top left;
+
+
 }
 
 .error {
@@ -23,11 +34,6 @@
     position: absolute;
     inset: 0;
 
-    background: linear-gradient(120deg,
-            #0a0f2c 0%,
-            #0f1e4d 50%,
-            #081233 100%);
-
     z-index: 0;
 }
 
@@ -41,35 +47,49 @@
 .left h2 {
     font-size: 2.4rem;
     font-weight: 700;
-    color: #ffffff;
+
+    color: #1e293b;
     margin: 0 0 16px;
     line-height: 1.2;
 }
 
 .left p {
+    color: #475569;
     font-size: 1rem;
-    color: rgba(255, 255, 255, 0.75);
     line-height: 1.6;
     margin: 0;
     font-weight: 500;
 }
 
 .formCard {
+    background: linear-gradient(145deg,
+            rgba(255, 255, 255, 0.75),
+            rgba(240, 244, 255, 0.6));
+
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+
     position: relative;
     z-index: 1;
     width: 580px;
     flex-shrink: 0;
-    background: rgba(10, 20, 70, 0.78);
-    border: 1px solid rgba(100, 140, 255, 0.2);
+
+
+    border: 1px solid rgba(0, 0, 0, 0.05);
     border-radius: 14px;
+    color: #0f172a;
     padding: 36px 32px 32px;
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.08),
+        0 1px 2px rgba(0, 0, 0, 0.05);
 }
+
 
 .formCard h3 {
     text-align: center;
-    color: #fff;
+     color: #0f172a;
+
     font-size: 1.05rem;
     font-weight: 600;
     margin: 0 0 24px;
@@ -92,15 +112,29 @@
     flex-direction: column;
 }
 
+
+.field select {
+    color: #475569;
+}
+
+.field select option {
+    background: #ffffff;
+    color: #0f172a;
+}
+
 .field input,
 .field select,
 .field textarea {
-    background: rgba(220, 228, 255, 0.12);
-    border: 1px solid rgba(130, 160, 255, 0.25);
+
+    background: rgba(255, 255, 255, 0.7);
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    color: #0f172a;
+
+
+
     border-radius: 6px;
     padding: 11px 14px;
     font-size: 0.875rem;
-    color: #fff;
     font-family: 'Sora', sans-serif;
     outline: none;
     transition: border-color 0.2s, background 0.2s;
@@ -110,11 +144,10 @@
 
 .field input::placeholder,
 .field textarea::placeholder {
-    color: rgba(200, 210, 255, 0.55);
+    color: #0f172a;
 }
 
 .field select {
-    color: rgba(200, 210, 255, 0.55);
     appearance: none;
     -webkit-appearance: none;
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='rgba(160,180,255,0.7)' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");
@@ -122,18 +155,25 @@
     background-position: right 12px center;
     padding-right: 32px;
     cursor: pointer;
+    color: #0f172a;
+}
+
+.field select:invalid {
+    color: #94a3b8;
 }
 
 .field select option {
     background: #0d1a5e;
-    color: #fff;
+    color: #64748b;
 }
 
 .field input:focus,
 .field select:focus,
 .field textarea:focus {
-    border-color: rgba(100, 150, 255, 0.65);
-    background: rgba(220, 228, 255, 0.16);
+    border-color: #2563eb;
+    color: #64748b;
+
+    background: #ffffff;
 }
 
 .field textarea {
@@ -244,6 +284,7 @@
     }
 
     .formCard {
+        color: #0f172a;
         width: 100%;
     }
 }
