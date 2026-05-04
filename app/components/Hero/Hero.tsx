@@ -92,6 +92,7 @@ export default function Hero() {
                     <button className={styles.cta}>Learn More</button>
                 </div>
 
+                {/*
 
                 <div className={styles.dots}>
                     {HERO_CONTENT.map((_, i) => (
@@ -103,6 +104,7 @@ export default function Hero() {
                         />
                     ))}
                 </div>
+                */}
 
             </div>
             <Info />

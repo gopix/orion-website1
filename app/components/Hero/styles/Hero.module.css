@@ -101,10 +101,15 @@
 
 .arrowLeft {
     left: clamp(10px, 3vw, 60px);
+    display:none;
+
+
 }
 
 .arrowRight {
     right: clamp(10px, 3vw, 60px);
+
+    display:none;
 }
 
 /* SVG chevron icons */
