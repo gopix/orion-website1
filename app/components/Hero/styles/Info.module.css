@@ -70,13 +70,13 @@
 }
 
 .philosophy {
-    margin-top:40px ;
+    margin-top: 40px;
     display: flex;
     align-items: center;
     gap: 40px;
     width: 100%;
+
     box-sizing: border-box;
-    padding-left: calc(110px + 40px);
     /* matches imageWrap width + gap */
 }
 
@@ -107,11 +107,11 @@
 }
 
 .philRight p {
+        max-width: 100%px;
     font-size: 0.95rem;
     color: #3d5068;
     line-height: 1.7;
     margin: 0;
-    max-width: 480px;
 }
 
 .philRight strong {
