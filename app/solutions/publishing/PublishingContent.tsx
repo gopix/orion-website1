@@ -45,9 +45,9 @@ export default function PublishingContent() {
                         ORION transforms publishing into a system-driven workflow with AI-assisted processes,
                         delivering clarity, consistency, and control.
                     </p>
-                </div>
 
                 {/* WORKFLOW */}
+                </div>
                 <div className={styles.card}>
                     <div className={styles.cardSubtitle}>WORKFLOW</div>
                     <div className={styles.stack}>

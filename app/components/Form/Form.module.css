@@ -9,8 +9,8 @@
     font-family: 'Sora', sans-serif;
     overflow: hidden;
 
-     color: #0f172a;
-   background-color: #f0f4fb;
+    color: #0f172a;
+    background-color: #f0f4fb;
 
     background-image:
         radial-gradient(ellipse at 0% 0%, #dce8fb 0%, transparent 55%),
@@ -38,10 +38,12 @@
 }
 
 .left {
+    margin-top: -20%;
+    margin-left :5%;   
     flex: 1;
     position: relative;
     z-index: 1;
-    padding-right: 40px;
+    padding-right: 80px;
 }
 
 .left h2 {
@@ -88,7 +90,7 @@
 
 .formCard h3 {
     text-align: center;
-     color: #0f172a;
+    color: #0f172a;
 
     font-size: 1.05rem;
     font-weight: 600;
