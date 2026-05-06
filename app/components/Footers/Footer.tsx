@@ -10,7 +10,7 @@ import linkedin from "./icon/linkedin.png"
 
 export default function Footer() {
 
-    const iconSize = 30 ;
+    const iconSize = 30;
     return (
         <footer className={styles.footer}>
 
@@ -21,10 +21,15 @@ export default function Footer() {
                     <Image src={logo} alt="ORION Logo" width={160} height={60} />
 
                     <p className={styles.tagline}>
-                    AI, Automation & Content Engineering Solutions    
+                        AI, Automation & Content Engineering Solutions
+                    </p>
+                    <p className={styles.address}>
+                        ORION Bits Systems Pvt. Ltd.<br />
+                        Your Address Line 1<br />
+                        City, State, PIN Code<br />
+                        India
                     </p>
 
-                    <h4>Follow Us</h4>
                     <div className={styles.socials}>
                         <a href="#" target="_blank">
                             <Image src={twitter} alt="X" width={iconSize} height={iconSize} />
