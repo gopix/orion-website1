@@ -28,7 +28,7 @@
     gap: 24px;
 
     width: 100%;
-    max-width: 1200px;
+    max-width: 1700px;
 
     margin: 0 auto;
     padding: 0 40px;
@@ -105,7 +105,22 @@
     padding: 14px;
     margin-top: 10px;
 }
+.innerBox:hover{
+    background: #2367D5;
 
+    border-color: #2367D5;
+
+    color: white;
+
+
+
+}
+
+
+.innerBox:hover h3,
+.innerBox:hover p {
+    color: white;
+}
 .innerBox h3 {
     margin: 0;
     font-size: 0.95rem;
