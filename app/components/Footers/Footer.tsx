@@ -25,9 +25,12 @@ export default function Footer() {
                     </p>
                     <p className={styles.address}>
                         ORION Bits Systems Pvt. Ltd.<br />
-                        Your Address Line 1<br />
-                        City, State, PIN Code<br />
-                        India
+
+                        Plot No - 155 SF,<br />
+                        SHAKTI KHAND-4 <br />
+                        INDIRAPURAM <br />
+                        GHAZIABAD
+                        201014 <br />
                     </p>
 
                     <div className={styles.socials}>
