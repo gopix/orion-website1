@@ -8,83 +8,28 @@ import bg from "./images/bg.png";
 import image1 from "./images/image1.png"
 import image2 from "./images/image2.png"
 
-
 import PublishingContent from "./PublishingContent";
+import content from "@/content.json";
 
-const slides: HeroSlide[] = [
-    {
-        title: "AI-Powered Systems for Modern Publishing Workflows",
-        subtitle: "From Submission to Insights — One Connected System",
-        description:
-            "Transform fragmented publishing operations into structured, intelligent workflows with real-time visibility and control.",
-    },
-];
-const InfoBlocks= [
-  {
-    image: image1,
-    imageAlt: "Publishing workflow systems",
+const slides: HeroSlide[] = content.publishing.slides;
 
-    heading: (
-      <>
-        Structured Publishing Workflows<br />
-        for Modern Content Operations
-      </>
-    ),
+const images = [image1, image2];
 
-    body: `Publishing workflows are often fragmented across emails, spreadsheets, and disconnected tools. 
-    This leads to poor visibility, delays, and inconsistent editorial processes. 
-    ORION transforms these fragmented operations into structured, system-driven workflows—giving teams clarity, 
-    control, and real-time visibility across the entire publishing lifecycle.`,
+const InfoBlocks = content.publishing.infoBlocks.map((block, i) => ({
+  ...block,
+  image: images[i],
+}));
 
-    philosophyTitle: (
-      <>
-        From Fragmentation<br />
-        to <span>STRUCTURE</span>
-      </>
-    ),
-
-    philosophyText: `We replace manual, disconnected workflows with structured pipelines that improve consistency,
-    reduce delays, and create a scalable operational foundation for publishing teams.`,
-  },
-
-  {
-    image: image2,
-    imageAlt: "Publishing platform intelligence",
-    reverse: true,
-
-    heading: (
-      <>
-        End-to-End Publishing Intelligence<br />
-        with ORION Platform
-      </>
-    ),
-
-    body: `ORION SUBMIT+, EDITOR+, and PUBLISH+ work together to manage the entire publishing lifecycle—
-    from manuscript submission and validation to editorial workflows and final business insights.
-    The platform acts as an intelligence layer on top of your existing tools, ensuring better decisions,
-    faster turnaround, and complete operational visibility.`,
-
-    philosophyTitle: (
-      <>
-        One Connected System,<br />
-        Full <span>VISIBILITY</span>
-      </>
-    ),
-
-    philosophyText: `From submission to distribution, ORION connects every stage of publishing into one
-    unified system—enabling data-driven decisions and complete control over operations.`,
-  },
-];
 export default function Page() {
-    return (
-        <>
-            <Navbar />
+  return (
+    <>
+      <Navbar />
 
-            <Hero slides={slides} background={bg}>
-                <Info blocks={InfoBlocks} />
-            </Hero>
-            <PublishingContent />
-            <Footer />
-        </>
-    );
+      <Hero slides={slides} background={bg}>
+        <Info blocks={InfoBlocks} />
+      </Hero>
+      <PublishingContent />
+      <Footer />
+    </>
+  );
 }

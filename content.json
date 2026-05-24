@@ -1,0 +1,620 @@
+{
+    "navbar": {
+        "items": [
+            {
+                "label": "About Us",
+                "href": "/"
+            },
+            {
+                "label": "Solutions",
+                "dropdown": [
+                    {
+                        "label": "Publishing",
+                        "href": "/solutions/publishing"
+                    },
+                    {
+                        "label": "CRM",
+                        "href": "/solutions/CRM"
+                    }
+                ]
+            },
+            {
+                "label": "Services",
+                "dropdown": [
+                    {
+                        "label": "AI & Intelligent Systems Development",
+                        "href": "/services/ai-system-dev"
+                    }
+                ]
+            },
+            {
+                "label": "Insights",
+                "dropdown": [
+                    {
+                        "label": "Case Studies",
+                        "href": "/insights/case-studies"
+                    }
+                ]
+            },
+            {
+                "label": "Contact Us",
+                "href": "/contact-us"
+            }
+        ],
+        "searchPlaceholder": "Search…"
+    },
+    "footer": {
+        "tagline": "AI, Automation & Content Engineering Solutions",
+        "address": [
+            "ORION Bits Systems Pvt. Ltd.",
+            "Plot No - 155 SF,",
+            "SHAKTI KHAND-4",
+            "INDIRAPURAM",
+            "GHAZIABAD",
+            "201014"
+        ],
+        "columns": [
+            {
+                "heading": "Solutions",
+                "items": [
+                    "ORION SUBMIT+",
+                    "ORION EDITOR+",
+                    "ORION PUBLISH+"
+                ]
+            },
+            {
+                "heading": "Services",
+                "items": [
+                    "CRM Implementation",
+                    "Automation Systems",
+                    "Integration Services",
+                    "Reporting & Dashboards"
+                ]
+            },
+            {
+                "heading": "Industries",
+                "items": [
+                    "Publishing & Content Services",
+                    "Education & EdTech",
+                    "Technology & Startups",
+                    "Enterprise & SMEs"
+                ]
+            }
+        ],
+        "copyright": "Copyright © 2026 ORION Bits Systems Pvt. Ltd. All rights reserved."
+    },
+    "form": {
+        "leftHeading": "Let's Get Started ",
+        "leftSubtext": "Intelligent publishing systems to elevate your business future, at your fingertips",
+        "formTitle": "Get in Touch",
+        "placeholders": {
+            "name": "Name*",
+            "email": "Business Email*",
+            "role": "Role*",
+            "mobile": "Mobile* (e.g. +91 98765 43210)",
+            "company": "Company Name*",
+            "message": "Tell Us How We Can Help!*"
+        },
+        "selects": {
+            "product": {
+                "placeholder": "Product / Services*",
+                "options": [
+                    {
+                        "value": "orion-submit",
+                        "label": "ORION SUBMIT+"
+                    },
+                    {
+                        "value": "orion-editor",
+                        "label": "ORION EDITOR+"
+                    },
+                    {
+                        "value": "orion-publish",
+                        "label": "ORION PUBLISH+"
+                    },
+                    {
+                        "value": "zoho-impl",
+                        "label": "Business Systems (Zoho)"
+                    },
+                    {
+                        "value": "other",
+                        "label": "Other"
+                    }
+                ]
+            },
+            "revenue": {
+                "placeholder": "Annual Revenue*",
+                "options": [
+                    {
+                        "value": "lt-1cr",
+                        "label": "Below ₹1 Cr"
+                    },
+                    {
+                        "value": "1-5cr",
+                        "label": "₹1 Cr – ₹5 Cr"
+                    },
+                    {
+                        "value": "5-20cr",
+                        "label": "₹5 Cr – ₹20 Cr"
+                    },
+                    {
+                        "value": "gt-20cr",
+                        "label": "Above ₹20 Cr"
+                    }
+                ]
+            },
+            "source": {
+                "placeholder": "How did you hear about us?",
+                "options": [
+                    {
+                        "value": "linkedin",
+                        "label": "LinkedIn"
+                    },
+                    {
+                        "value": "google",
+                        "label": "Google Search"
+                    },
+                    {
+                        "value": "referral",
+                        "label": "Referral"
+                    },
+                    {
+                        "value": "event",
+                        "label": "Event / Conference"
+                    },
+                    {
+                        "value": "other",
+                        "label": "Other"
+                    }
+                ]
+            }
+        },
+        "validation": {
+            "nameRequired": "Name is required.",
+            "nameInvalid": "Enter a valid name.",
+            "emailRequired": "Email is required.",
+            "emailInvalid": "Enter a valid business email.",
+            "roleRequired": "Role is required.",
+            "mobileRequired": "Mobile number is required.",
+            "mobileInvalid": "Enter a valid mobile number.",
+            "mobileLength": "Mobile number must be between 7 and 15 digits.",
+            "companyRequired": "Company name is required.",
+            "productRequired": "Please select a product or service.",
+            "revenueRequired": "Please select your annual revenue.",
+            "sourceRequired": "Please tell us how you heard about us.",
+            "messageRequired": "Please tell us how we can help.",
+            "messageMinLength": "Message must be at least 10 characters.",
+            "recaptchaRequired": "Please complete the reCAPTCHA."
+        },
+        "submitButton": "Submit",
+        "submittingButton": "Submitting...",
+        "successTitle": "Thank you!",
+        "successMessage": "We've received your details and will be in touch shortly.",
+        "errorMessage": "Something went wrong. Please try again."
+    },
+    "emptyPage": {
+        "defaultTitle": "Page Not Available",
+        "defaultMessage": "This section is under construction or doesn't exist yet.",
+        "backLink": "Go Back Home"
+    },
+    "portfolio": {
+        "heading": "Explore Our Technology Stack",
+        "tabs": [
+            "Solutions",
+            "Services",
+            "Industries"
+        ],
+        "subtext": "ORION operates across two focused verticals — Business Systems Implementation powered by Zoho, and the ORION Publishing Intelligence Platform. Together they form a fully connected, insight-driven foundation for modern publishing businesses.",
+        "cards": [
+            {
+                "title": "Zoho",
+                "subtitle": "Business Systems Implementation",
+                "description": "Empowering businesses with CRM setup, sales and workflow automation, inventory structuring, and custom reporting dashboards — configured precisely for publishing and distribution operations.",
+                "link": "#"
+            },
+            {
+                "title": "ORION Platform",
+                "subtitle": "Publishing Intelligence Layer",
+                "description": "A unified platform built for publishers — combining manuscript validation (SUBMIT+), AI-assisted editorial intelligence (EDITOR+), and real-time business dashboards (PUBLISH+) into one connected system.",
+                "link": "#"
+            }
+        ],
+        "knowMoreLabel": "Know More"
+    },
+    "home": {
+        "slides": [
+            {
+                "title": "ORION Bits Systems Pvt. Ltd.",
+                "subtitle": "AI, Automation & Content Engineering Solutions",
+                "description": "We help publishers move from fragmented workflows to structured, intelligent systems with real-time visibility and better decision-making."
+            },
+            {
+                "title": "Zoho Business Systems",
+                "subtitle": "Structured Digital Operations for Growing Businesses",
+                "description": "We implement and customize Zoho CRM, automation, and reporting tools — giving your team organized workflows and a strong foundation for scalable growth."
+            },
+            {
+                "title": "Publishing Intelligence Platform",
+                "subtitle": "From Submission to Sale — One Connected System",
+                "description": "ORION SUBMIT+, EDITOR+, and PUBLISH+ work together to validate manuscripts, improve editorial quality, and deliver real-time business visibility."
+            }
+        ],
+        "infoBlocks": [
+            {
+                "imageAlt": "Publishing industry technology",
+                "heading": [
+                    "Intelligent Digital Systems",
+                    "for the Publishing Industry"
+                ],
+                "body": "ORION Bits Systems is a technology company focused on building intelligent digital systems for the publishing industry. We help publishers move from fragmented operations and manual workflows to structured systems, real-time visibility, and better decision-making—without disrupting their existing tools. As an intelligence layer on top of your current ecosystem, we deliver clarity, consistency, and control through precision—not complexity.",
+                "philosophyTitle": [
+                    "ORION's Philosophy",
+                    "is to deliver CLARITY"
+                ],
+                "philosophyHighlight": "CLARITY",
+                "philosophyText": "ORION's foundation is built upon intelligence and precision, guiding us to provide results-driven publishing systems that propel our clients towards structured, scalable growth.",
+                "reverse": false
+            },
+            {
+                "imageAlt": "Data-driven publishing workflows",
+                "heading": [
+                    "Zoho-Powered Business Systems",
+                    "for Growing Organizations"
+                ],
+                "body": "We help businesses implement structured digital systems using Zoho to streamline operations and improve efficiency. From CRM setup and sales automation to inventory management and custom reporting dashboards — ORION configures and connects your tools so your team spends less time on manual work and more time on what matters. Built for publishers, distributors, and content-driven businesses across India.",
+                "philosophyTitle": [
+                    "Two Verticals,",
+                    "One Connected SYSTEM"
+                ],
+                "philosophyHighlight": "SYSTEM",
+                "philosophyText": "Our Business Systems Implementation builds the operational foundation, while the ORION Platform adds the intelligence layer on top — giving your publishing business complete visibility, from submission to sale.",
+                "reverse": true
+            }
+        ]
+    },
+    "caseStudies": {
+        "slides": [
+            {
+                "title": "Real Problems. Real Systems. Real Impact.",
+                "subtitle": "Intelligent Solutions Across Industries",
+                "description": "Explore how Orion designs and delivers intelligent systems that solve complex business challenges across industries."
+            }
+        ],
+        "infoBlocks": [
+            {
+                "imageAlt": "Orion intelligent systems",
+                "heading": [
+                    "Deep Problem Understanding,",
+                    "Intelligent System Design"
+                ],
+                "body": "Many businesses struggle with complex operational challenges that off-the-shelf tools can't solve. Processes are fragmented, decisions are slow, and visibility is limited. ORION engineers purpose-built systems that address these challenges head-on — combining AI, automation, and intelligent design to deliver measurable outcomes.",
+                "philosophyTitle": [
+                    "From Challenge",
+                    "to SOLUTION"
+                ],
+                "philosophyHighlight": "SOLUTION",
+                "philosophyText": "We don't apply generic tools to unique problems. Every system we build starts with a deep understanding of the challenge — and ends with outcomes that are measurable, scalable, and real.",
+                "reverse": false
+            },
+            {
+                "imageAlt": "Orion case studies impact",
+                "heading": [
+                    "Measurable Outcomes Across",
+                    "Every Industry We Serve"
+                ],
+                "body": "From publishing to manufacturing, content engineering to enterprise AI — ORION has delivered intelligent systems that reduce inefficiencies, improve decision quality, and create scalable operational foundations. Each engagement is tailored to the specific context, constraints, and goals of the business.",
+                "philosophyTitle": [
+                    "Proven Results,",
+                    "Every ENGAGEMENT"
+                ],
+                "philosophyHighlight": "ENGAGEMENT",
+                "philosophyText": "Our case studies reflect a consistent approach: understand deeply, design intelligently, and deliver systems that create lasting operational impact.",
+                "reverse": true
+            }
+        ],
+        "content": {
+            "heading": "Real Problems. Real Systems. Real Impact.",
+            "subtext": "Explore how Orion designs and delivers intelligent systems that solve complex business challenges across industries.",
+            "studies": [
+                {
+                    "tag": "Publishing",
+                    "title": "AI-Powered Manuscript Evaluation",
+                    "description": "Built an AI system to automate manuscript screening based on structure, readability, and content quality.",
+                    "impact": [
+                        "⏱ Reduced evaluation time by 70%",
+                        "📈 Improved decision consistency",
+                        "👩‍💼 Enabled editorial focus"
+                    ]
+                },
+                {
+                    "tag": "Manufacturing",
+                    "title": "Intelligent Quality Control System",
+                    "description": "Developed ML-based defect detection using production parameters like temperature, pressure, and machine speed.",
+                    "impact": [
+                        "📉 Reduced defects by 35%",
+                        "⚙️ Improved process efficiency",
+                        "📊 Data-driven decisions"
+                    ]
+                },
+                {
+                    "tag": "Content Engineering",
+                    "title": "AI-Assisted Copy Editing Engine",
+                    "description": "Built a hybrid system combining rule-based editing with LLM-based validation and fact-checking.",
+                    "impact": [
+                        "✍️ Faster editing cycles",
+                        "📚 Improved content quality",
+                        "🔍 Better accuracy & consistency"
+                    ]
+                },
+                {
+                    "tag": "Enterprise AI",
+                    "title": "Agentic RAG Knowledge System",
+                    "description": "Designed a retrieval-augmented system with intelligent agents for contextual knowledge access.",
+                    "impact": [
+                        "⚡ Faster information retrieval",
+                        "🧩 Better knowledge utilization",
+                        "🤖 Reduced manual dependency"
+                    ]
+                },
+                {
+                    "tag": "Workflow Automation",
+                    "title": "Manufacturing Workflow Automation",
+                    "description": "Built a digital checklist system with approval loops, rejection workflows, and tracking.",
+                    "impact": [
+                        "🔄 Streamlined operations",
+                        "📋 Improved accountability",
+                        "⏳ Reduced delays"
+                    ]
+                }
+            ],
+            "ctaHeading": "Let's Build Your Next System",
+            "ctaText": "Every business has unique challenges. We specialize in transforming those challenges into scalable, intelligent systems.",
+            "ctaButton": "Contact Us"
+        }
+    },
+    "aiSystemsDev": {
+        "slides": [
+            {
+                "title": "AI & Intelligent Systems Development",
+                "subtitle": "From LLM Platforms to Agentic Workflows",
+                "description": "We design and build enterprise-grade AI systems that automate complex workflows using LLMs, RAG, and multi-agent architectures."
+            }
+        ],
+        "infoBlocks": [
+            {
+                "heading": [
+                    "The Challenge with",
+                    "Traditional Software"
+                ],
+                "body": "Traditional applications are not built for complex, knowledge-driven workflows. As businesses scale, fragmented systems and manual processes limit efficiency and decision-making.",
+                "philosophyTitle": [
+                    "From Static Systems",
+                    "to INTELLIGENCE"
+                ],
+                "philosophyHighlight": "INTELLIGENCE",
+                "philosophyText": "Modern businesses need systems that understand context, automate decisions, and continuously improve with data and feedback.",
+                "reverse": false
+            },
+            {
+                "heading": [
+                    "AI-Native System Design",
+                    "Built for Real Workflows"
+                ],
+                "body": "At ORION, we build AI systems with intelligence at the core—not as an add-on. From multi-agent workflows to RAG pipelines, we create systems that think, adapt, and execute.",
+                "philosophyTitle": [
+                    "Not Just AI Features,",
+                    "But SYSTEMS"
+                ],
+                "philosophyHighlight": "SYSTEMS",
+                "philosophyText": "We combine structured system design with advanced AI capabilities to deliver production-grade platforms, not prototypes.",
+                "reverse": true
+            }
+        ],
+        "content": {
+            "whatWeBuildTitle": "AI Systems We Build",
+            "whatWeBuildItems": [
+                "Agentic AI Systems",
+                "RAG-Based Platforms",
+                "Document Intelligence Systems",
+                "AI Workflow Automation",
+                "Custom Enterprise Platforms",
+                "Data & AI Pipelines"
+            ],
+            "flagshipTitle": "Flagship AI Systems",
+            "flagshipItems": [
+                {
+                    "name": "DMAP-AI:",
+                    "description": "Code transformation using agentic RAG"
+                },
+                {
+                    "name": "AI Editorial Pre-Flight:",
+                    "description": "Automated manuscript validation"
+                }
+            ],
+            "techTitle": "Technology & Architecture",
+            "techItems": [
+                "LLMs & Agentic AI",
+                "RAG Systems",
+                "Vector Databases",
+                "NLP & ML",
+                "Data Engineering (Kafka, Spark)",
+                "Cloud & DevOps (AWS, Docker)"
+            ],
+            "benefitsTitle": "What You Gain",
+            "benefitsItems": [
+                "Automation of complex workflows",
+                "Reduced manual effort",
+                "Scalable architecture",
+                "Enterprise-grade systems"
+            ],
+            "whoTitle": "Who This Is For",
+            "whoItems": [
+                "Enterprises adopting AI",
+                "AI-first product teams",
+                "Publishing & fintech",
+                "Data-driven companies"
+            ],
+            "whyTitle": "Why ORION",
+            "whyText": "We bridge cutting-edge AI with real-world deployment. Our systems are production-grade, scalable, and built for measurable business impact.",
+            "ctaHeading": "Have an AI Use Case to Solve?",
+            "ctaButton": "Talk to Our Team"
+        }
+    },
+    "crm": {
+        "slides": [
+            {
+                "title": "CRM Systems That Actually Work for Your Business",
+                "subtitle": "Structured Systems. Real Adoption. Measurable Results.",
+                "description": "Move beyond spreadsheets and disconnected tools. Build a structured CRM system with full visibility into your sales and operations."
+            }
+        ],
+        "infoBlocks": [
+            {
+                "heading": [
+                    "Why Most CRM",
+                    "Implementations Fail"
+                ],
+                "body": "Many businesses invest in CRM tools but fail to see results. Data is incomplete, teams don't adopt the system, and workflows remain manual. The issue isn't the tool— it's the lack of structured implementation aligned with real business processes.",
+                "philosophyTitle": [
+                    "The Problem Isn't Tools,",
+                    "It's STRUCTURE"
+                ],
+                "philosophyHighlight": "STRUCTURE",
+                "philosophyText": "Without clear workflows and adoption strategy, even the best CRM tools fail to deliver value. Structure is what turns tools into systems.",
+                "reverse": false
+            },
+            {
+                "heading": [
+                    "A Structured Approach",
+                    "to CRM Implementation"
+                ],
+                "body": "At ORION, we don't just configure CRM—we design complete business systems. We map your sales processes, define workflows, and implement automation aligned with how your team actually works.",
+                "philosophyTitle": [
+                    "Systems That Drive",
+                    "ADOPTION"
+                ],
+                "philosophyHighlight": "ADOPTION",
+                "philosophyText": "Our approach ensures your CRM is actually used by your team—leading to better data, clearer insights, and measurable business outcomes.",
+                "reverse": true
+            }
+        ],
+        "content": {
+            "whatWeBuildTitle": "What We Build",
+            "whatWeBuildItems": [
+                "Lead Management System",
+                "Sales Pipeline Tracking",
+                "Workflow Automation",
+                "Task & Follow-up Systems",
+                "Reporting & Dashboards",
+                "System Integrations"
+            ],
+            "capabilitiesTitle": "Core Capabilities",
+            "capabilitiesItems": [
+                "Centralized customer data",
+                "Automated lead assignment",
+                "Pipeline visibility",
+                "Sales performance tracking",
+                "Custom dashboards",
+                "Workflow triggers and alerts"
+            ],
+            "benefitsTitle": "What You Gain",
+            "benefitsItems": [
+                "Clear visibility into sales pipeline",
+                "Better lead conversion",
+                "Reduced manual work",
+                "Improved accountability",
+                "Faster decision-making"
+            ],
+            "whoTitle": "Who This Is For",
+            "whoItems": [
+                "SMEs & growing businesses",
+                "Sales-driven teams",
+                "Distributors & service companies",
+                "Startups scaling operations"
+            ],
+            "whyTitle": "Why ORION",
+            "whyText": "We focus on structured implementation—not just tool setup. Our systems are designed for real adoption, ensuring your team actually uses the CRM and gets measurable value.",
+            "ctaHeading": "Ready to Build a CRM That Works?",
+            "ctaButton": "Talk to Our Team"
+        }
+    },
+    "publishing": {
+        "slides": [
+            {
+                "title": "AI-Powered Systems for Modern Publishing Workflows",
+                "subtitle": "From Submission to Insights — One Connected System",
+                "description": "Transform fragmented publishing operations into structured, intelligent workflows with real-time visibility and control."
+            }
+        ],
+        "infoBlocks": [
+            {
+                "imageAlt": "Publishing workflow systems",
+                "heading": [
+                    "Structured Publishing Workflows",
+                    "for Modern Content Operations"
+                ],
+                "body": "Publishing workflows are often fragmented across emails, spreadsheets, and disconnected tools. This leads to poor visibility, delays, and inconsistent editorial processes. ORION transforms these fragmented operations into structured, system-driven workflows—giving teams clarity, control, and real-time visibility across the entire publishing lifecycle.",
+                "philosophyTitle": [
+                    "From Fragmentation",
+                    "to STRUCTURE"
+                ],
+                "philosophyHighlight": "STRUCTURE",
+                "philosophyText": "We replace manual, disconnected workflows with structured pipelines that improve consistency, reduce delays, and create a scalable operational foundation for publishing teams.",
+                "reverse": false
+            },
+            {
+                "imageAlt": "Publishing platform intelligence",
+                "heading": [
+                    "End-to-End Publishing Intelligence",
+                    "with ORION Platform"
+                ],
+                "body": "ORION SUBMIT+, EDITOR+, and PUBLISH+ work together to manage the entire publishing lifecycle— from manuscript submission and validation to editorial workflows and final business insights. The platform acts as an intelligence layer on top of your existing tools, ensuring better decisions, faster turnaround, and complete operational visibility.",
+                "philosophyTitle": [
+                    "One Connected System,",
+                    "Full VISIBILITY"
+                ],
+                "philosophyHighlight": "VISIBILITY",
+                "philosophyText": "From submission to distribution, ORION connects every stage of publishing into one unified system—enabling data-driven decisions and complete control over operations.",
+                "reverse": true
+            }
+        ],
+        "content": {
+            "heading": "Intelligent Publishing Systems",
+            "subtext": "Transform fragmented workflows into structured, intelligent systems with real-time visibility, editorial control, and scalable operations.",
+            "problem": {
+                "label": "THE PROBLEM",
+                "text": "Publishing workflows are fragmented across emails, spreadsheets, and tools. This leads to poor visibility, delays, and inconsistent editorial processes."
+            },
+            "solution": {
+                "label": "THE SOLUTION",
+                "text": "ORION transforms publishing into a system-driven workflow with AI-assisted processes, delivering clarity, consistency, and control."
+            },
+            "workflow": {
+                "label": "WORKFLOW",
+                "steps": [
+                    "Submission & Intake",
+                    "Validation & Pre-Editing",
+                    "Editorial Workflows",
+                    "Production & Publishing",
+                    "Insights & Reporting"
+                ]
+            },
+            "platform": {
+                "label": "PLATFORM",
+                "items": [
+                    {
+                        "name": "SUBMIT+",
+                        "description": "Structured manuscript intake and validation."
+                    },
+                    {
+                        "name": "EDITOR+",
+                        "description": "AI-assisted editorial workflows."
+                    },
+                    {
+                        "name": "PUBLISH+",
+                        "description": "Analytics and business visibility."
+                    }
+                ]
+            }
+        }
+    }
+}

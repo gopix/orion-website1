@@ -2,6 +2,9 @@
 
 import Link from "next/link";
 import styles from "./AIContent.module.css";
+import content from "@/content.json";
+
+const aiContent = content.aiSystemsDev.content;
 
 export default function AIContent() {
   return (
@@ -9,17 +12,10 @@ export default function AIContent() {
 
       {/* WHAT WE BUILD */}
       <section className={styles.section}>
-        <h2 className={styles.title}>AI Systems We Build</h2>
+        <h2 className={styles.title}>{aiContent.whatWeBuildTitle}</h2>
 
         <div className={styles.grid}>
-          {[
-            "Agentic AI Systems",
-            "RAG-Based Platforms",
-            "Document Intelligence Systems",
-            "AI Workflow Automation",
-            "Custom Enterprise Platforms",
-            "Data & AI Pipelines",
-          ].map((item) => (
+          {aiContent.whatWeBuildItems.map((item) => (
             <div key={item} className={styles.card}>{item}</div>
           ))}
         </div>
@@ -27,46 +23,42 @@ export default function AIContent() {
 
       {/* FLAGSHIP */}
       <section className={styles.cardSection}>
-        <h2>Flagship AI Systems</h2>
+        <h2>{aiContent.flagshipTitle}</h2>
         <ul className={styles.list}>
-          <li><strong>DMAP-AI:</strong> Code transformation using agentic RAG</li>
-          <li><strong>AI Editorial Pre-Flight:</strong> Automated manuscript validation</li>
+          {aiContent.flagshipItems.map((item) => (
+            <li key={item.name}><strong>{item.name}</strong> {item.description}</li>
+          ))}
         </ul>
       </section>
 
       {/* TECH STACK */}
       <section className={styles.cardSection}>
-        <h2>Technology & Architecture</h2>
+        <h2>{aiContent.techTitle}</h2>
         <ul className={styles.list}>
-          <li>LLMs & Agentic AI</li>
-          <li>RAG Systems</li>
-          <li>Vector Databases</li>
-          <li>NLP & ML</li>
-          <li>Data Engineering (Kafka, Spark)</li>
-          <li>Cloud & DevOps (AWS, Docker)</li>
+          {aiContent.techItems.map((item) => (
+            <li key={item}>{item}</li>
+          ))}
         </ul>
       </section>
 
       {/* BENEFITS + WHO */}
       <div className={styles.grid2}>
-        
+
         <section className={styles.cardSection}>
-          <h2>What You Gain</h2>
+          <h2>{aiContent.benefitsTitle}</h2>
           <ul className={styles.list}>
-            <li>Automation of complex workflows</li>
-            <li>Reduced manual effort</li>
-            <li>Scalable architecture</li>
-            <li>Enterprise-grade systems</li>
+            {aiContent.benefitsItems.map((item) => (
+              <li key={item}>{item}</li>
+            ))}
           </ul>
         </section>
 
         <section className={styles.cardSection}>
-          <h2>Who This Is For</h2>
+          <h2>{aiContent.whoTitle}</h2>
           <ul className={styles.list}>
-            <li>Enterprises adopting AI</li>
-            <li>AI-first product teams</li>
-            <li>Publishing & fintech</li>
-            <li>Data-driven companies</li>
+            {aiContent.whoItems.map((item) => (
+              <li key={item}>{item}</li>
+            ))}
           </ul>
         </section>
 
@@ -74,18 +66,17 @@ export default function AIContent() {
 
       {/* WHY */}
       <section className={styles.section}>
-        <h2 className={styles.title}>Why ORION</h2>
+        <h2 className={styles.title}>{aiContent.whyTitle}</h2>
         <p className={styles.desc}>
-          We bridge cutting-edge AI with real-world deployment. Our systems are production-grade,
-          scalable, and built for measurable business impact.
+          {aiContent.whyText}
         </p>
       </section>
 
       {/* CTA */}
       <section className={styles.cta}>
-        <h2>Have an AI Use Case to Solve?</h2>
+        <h2>{aiContent.ctaHeading}</h2>
         <Link href="/contact-us" className={styles.btn}>
-          Talk to Our Team
+          {aiContent.ctaButton}
         </Link>
       </section>
 

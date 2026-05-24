@@ -1,39 +1,11 @@
 "use client";
 
 import styles from "./styles/Portfolio.module.css";
+import content from "@/content.json";
 
-const TABS = ["Solutions", "Services", "Industries"]
+const portfolioContent = content.portfolio;
 
-const CARDS = [
-    {
-        logo: (
-            <div className={styles.zohoLogo}>
-                <span className={styles.z}>Z</span>
-                <span className={styles.o1}>O</span>
-                <span className={styles.h}>H</span>
-                <span className={styles.o2}>O</span>
-            </div>
-        ),
-        title: "Zoho",
-        subtitle: "Business Systems Implementation",
-        description:
-            "Empowering businesses with CRM setup, sales and workflow automation, inventory structuring, and custom reporting dashboards — configured precisely for publishing and distribution operations.",
-        link: "#",
-    },
-    {
-        logo: (
-            <div className={styles.orionLogo}>
-                <span className={styles.orionIcon}>◎</span>
-                <span className={styles.orionWord}>ORION</span>
-            </div>
-        ),
-        title: "ORION Platform",
-        subtitle: "Publishing Intelligence Layer",
-        description:
-            "A unified platform built for publishers — combining manuscript validation (SUBMIT+), AI-assisted editorial intelligence (EDITOR+), and real-time business dashboards (PUBLISH+) into one connected system.",
-        link: "#",
-    },
-]
+const CARDS = portfolioContent.cards;
 
 export default function Portfolio() {
     return (
@@ -44,10 +16,11 @@ export default function Portfolio() {
             <div className={styles.header}>
                 <div className={styles.headerLeft}>
                     <h2 className={styles.heading}>
-                        Explore Our<br />Technology Stack
+                        {portfolioContent.heading.split(" ").slice(0, 2).join(" ")}<br />
+                        {portfolioContent.heading.split(" ").slice(2).join(" ")}
                     </h2>
                     <div className={styles.tabs}>
-                        {TABS.map((tab, i) => (
+                        {portfolioContent.tabs.map((tab, i) => (
                             <button
                                 key={tab}
                                 className={`${styles.tab} ${i === 0 ? styles.tabActive : ""}`}
@@ -59,9 +32,7 @@ export default function Portfolio() {
                 </div>
                 <div className={styles.headerRight}>
                     <p className={styles.subtext}>
-                        ORION operates across two focused verticals — Business Systems Implementation
-                        powered by Zoho, and the ORION Publishing Intelligence Platform. Together they
-                        form a fully connected, insight-driven foundation for modern publishing businesses.
+                        {portfolioContent.subtext}
                     </p>
                 </div>
             </div>
@@ -69,11 +40,25 @@ export default function Portfolio() {
             <div className={styles.cards}>
                 {CARDS.map((card) => (
                     <div key={card.title} className={styles.card}>
-                        <div className={styles.cardLogo}>{card.logo}</div>
+                        <div className={styles.cardLogo}>
+                            {card.title === "Zoho" ? (
+                                <div className={styles.zohoLogo}>
+                                    <span className={styles.z}>Z</span>
+                                    <span className={styles.o1}>O</span>
+                                    <span className={styles.h}>H</span>
+                                    <span className={styles.o2}>O</span>
+                                </div>
+                            ) : (
+                                <div className={styles.orionLogo}>
+                                    <span className={styles.orionIcon}>◎</span>
+                                    <span className={styles.orionWord}>ORION</span>
+                                </div>
+                            )}
+                        </div>
                         <div className={styles.cardSubtitle}>{card.subtitle}</div>
                         <p className={styles.cardDesc}>{card.description}</p>
                         <a href={card.link} className={styles.knowMore}>
-                            Know More
+                            {portfolioContent.knowMoreLabel}
                             <span className={styles.arrow}>→</span>
                         </a>
                     </div>

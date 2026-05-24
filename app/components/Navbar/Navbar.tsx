@@ -9,6 +9,7 @@ import logo from "../../logo.jpeg";
 import Image from "next/image";
 import Link from "next/link";
 
+import content from "@/content.json";
 
 
 interface NavbarItem {
@@ -17,29 +18,7 @@ interface NavbarItem {
     dropdown?: { label: string; href: string }[];
 }
 
-const NAV_ITEMS: NavbarItem[] = [
-    { label: "About Us", href: "/" },
-    {
-        label: "Solutions",
-        dropdown: [
-            { label: "Publishing", href: "/solutions/publishing" },
-            { label: "CRM", href: "/solutions/CRM" },
-        ],
-    },
-    {
-        label: "Services",
-        dropdown: [
-            { label: "AI & Intelligent Systems Development", href: "/services/ai-system-dev" },
-        ],
-    },
-    {
-        label: "Insights",
-        dropdown: [
-            { label: "Case Studies", href: "/insights/case-studies" },
-        ],
-    },
-    { label: "Contact Us", href: "/contact-us" },
-];
+const NAV_ITEMS: NavbarItem[] = content.navbar.items;
 
 function ChevronIcon({ open }: { open: boolean }) {
     return (
@@ -178,7 +157,7 @@ export default function Navbar() {
                         <input
                             ref={searchRef}
                             className={styles.searchinput}
-                            placeholder="Search…"
+                            placeholder={content.navbar.searchPlaceholder}
                             onBlur={() => setSearchOpen(false)}
                         />
                     )}

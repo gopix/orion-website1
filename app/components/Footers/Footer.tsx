@@ -8,6 +8,10 @@ import facebook from "./icon/facebook.png"
 import twitter from "./icon/twitter.png"
 import linkedin from "./icon/linkedin.png"
 
+import content from "@/content.json";
+
+const footerContent = content.footer;
+
 export default function Footer() {
 
     const iconSize = 30;
@@ -21,16 +25,12 @@ export default function Footer() {
                     <Image src={logo} alt="ORION Logo" width={160} height={60} />
 
                     <p className={styles.tagline}>
-                        AI, Automation & Content Engineering Solutions
+                        {footerContent.tagline}
                     </p>
                     <p className={styles.address}>
-                        ORION Bits Systems Pvt. Ltd.<br />
-
-                        Plot No - 155 SF,<br />
-                        SHAKTI KHAND-4 <br />
-                        INDIRAPURAM <br />
-                        GHAZIABAD
-                        201014 <br />
+                        {footerContent.address.map((line, i) => (
+                            <span key={i}>{line}{i < footerContent.address.length - 1 && <br />}</span>
+                        ))}
                     </p>
 
                     <div className={styles.socials}>
@@ -48,44 +48,24 @@ export default function Footer() {
                     </div>
                 </div>
 
-                {/* SOLUTIONS */}
-                <div className={styles.col}>
-                    <h3>Solutions</h3>
-                    <ul>
-                        <li>ORION SUBMIT+</li>
-                        <li>ORION EDITOR+</li>
-                        <li>ORION PUBLISH+</li>
-                    </ul>
-                </div>
-
-                {/* SERVICES */}
-                <div className={styles.col}>
-                    <h3>Services</h3>
-                    <ul>
-                        <li>CRM Implementation</li>
-                        <li>Automation Systems</li>
-                        <li>Integration Services</li>
-                        <li>Reporting & Dashboards</li>
-                    </ul>
-                </div>
-
-                {/* INDUSTRIES */}
-                <div className={styles.col}>
-                    <h3>Industries</h3>
-                    <ul>
-                        <li>Publishing & Content Services</li>
-                        <li>Education & EdTech </li>
-                        <li>Technology & Startups</li>
-                        <li>Enterprise & SMEs</li>
-                    </ul>
-                </div>
+                {/* DYNAMIC COLUMNS */}
+                {footerContent.columns.map((col) => (
+                    <div className={styles.col} key={col.heading}>
+                        <h3>{col.heading}</h3>
+                        <ul>
+                            {col.items.map((item) => (
+                                <li key={item}>{item}</li>
+                            ))}
+                        </ul>
+                    </div>
+                ))}
 
             </div>
 
             {/* BOTTOM */}
             <div className={styles.bottom}>
                 <p>
-                    Copyright © 2026 ORION Bits Systems Pvt. Ltd. All rights reserved.
+                    {footerContent.copyright}
                 </p>
             </div>
 

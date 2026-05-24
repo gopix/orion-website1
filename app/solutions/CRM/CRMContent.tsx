@@ -2,23 +2,20 @@
 
 import styles from "./CRMContent.module.css";
 import Link from "next/link";
+import content from "@/content.json";
+
+const crmContent = content.crm.content;
+
 export default function CRMContent() {
     return (
         <div className={styles.container}>
 
             {/* WHAT WE BUILD */}
             <section className={styles.section}>
-                <h2 className={styles.title}>What We Build</h2>
+                <h2 className={styles.title}>{crmContent.whatWeBuildTitle}</h2>
 
                 <div className={styles.pillGrid}>
-                    {[
-                        "Lead Management System",
-                        "Sales Pipeline Tracking",
-                        "Workflow Automation",
-                        "Task & Follow-up Systems",
-                        "Reporting & Dashboards",
-                        "System Integrations",
-                    ].map((item) => (
+                    {crmContent.whatWeBuildItems.map((item) => (
                         <div key={item} className={styles.pill}>{item}</div>
                     ))}
                 </div>
@@ -26,14 +23,11 @@ export default function CRMContent() {
 
             {/* CAPABILITIES */}
             <section className={styles.cardSection}>
-                <h2>Core Capabilities</h2>
+                <h2>{crmContent.capabilitiesTitle}</h2>
                 <ul className={styles.list}>
-                    <li>Centralized customer data</li>
-                    <li>Automated lead assignment</li>
-                    <li>Pipeline visibility</li>
-                    <li>Sales performance tracking</li>
-                    <li>Custom dashboards</li>
-                    <li>Workflow triggers and alerts</li>
+                    {crmContent.capabilitiesItems.map((item) => (
+                        <li key={item}>{item}</li>
+                    ))}
                 </ul>
             </section>
 
@@ -41,23 +35,20 @@ export default function CRMContent() {
             <div className={styles.grid2}>
 
                 <section className={styles.cardSection}>
-                    <h2>What You Gain</h2>
+                    <h2>{crmContent.benefitsTitle}</h2>
                     <ul className={styles.list}>
-                        <li>Clear visibility into sales pipeline</li>
-                        <li>Better lead conversion</li>
-                        <li>Reduced manual work</li>
-                        <li>Improved accountability</li>
-                        <li>Faster decision-making</li>
+                        {crmContent.benefitsItems.map((item) => (
+                            <li key={item}>{item}</li>
+                        ))}
                     </ul>
                 </section>
 
                 <section className={styles.cardSection}>
-                    <h2>Who This Is For</h2>
+                    <h2>{crmContent.whoTitle}</h2>
                     <ul className={styles.list}>
-                        <li>SMEs & growing businesses</li>
-                        <li>Sales-driven teams</li>
-                        <li>Distributors & service companies</li>
-                        <li>Startups scaling operations</li>
+                        {crmContent.whoItems.map((item) => (
+                            <li key={item}>{item}</li>
+                        ))}
                     </ul>
                 </section>
 
@@ -65,20 +56,18 @@ export default function CRMContent() {
 
             {/* WHY */}
             <section className={styles.section}>
-                <h2 className={styles.title}>Why ORION</h2>
+                <h2 className={styles.title}>{crmContent.whyTitle}</h2>
                 <p className={styles.desc}>
-                    We focus on structured implementation—not just tool setup.
-                    Our systems are designed for real adoption, ensuring your team actually uses the CRM and gets measurable value.
+                    {crmContent.whyText}
                 </p>
             </section>
 
             {/* CTA */}
             <section className={styles.cta}>
-                <h2>Ready to Build a CRM That Works?</h2>
-
+                <h2>{crmContent.ctaHeading}</h2>
 
                 <Link href="/contact-us">
-                    <button className={styles.btn}>Talk to Our Team</button>
+                    <button className={styles.btn}>{crmContent.ctaButton}</button>
                 </Link>
             </section>
 

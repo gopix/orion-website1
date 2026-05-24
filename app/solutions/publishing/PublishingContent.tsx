@@ -1,6 +1,9 @@
 "use client";
 
 import styles from "./styles/PublishingContent.module.css";
+import content from "@/content.json";
+
+const pubContent = content.publishing.content;
 
 export default function PublishingContent() {
     return (
@@ -14,14 +17,13 @@ export default function PublishingContent() {
             <div className={styles.header}>
                 <div className={styles.headerLeft}>
                     <h2 className={styles.heading}>
-                        Intelligent Publishing Systems
+                        {pubContent.heading}
                     </h2>
                 </div>
 
                 <div className={styles.headerRight}>
                     <p className={styles.subtext}>
-                        Transform fragmented workflows into structured, intelligent systems
-                        with real-time visibility, editorial control, and scalable operations.
+                        {pubContent.subtext}
                     </p>
                 </div>
             </div>
@@ -31,53 +33,41 @@ export default function PublishingContent() {
 
                 {/* PROBLEM */}
                 <div className={styles.card}>
-                    <div className={styles.cardSubtitle}>THE PROBLEM</div>
+                    <div className={styles.cardSubtitle}>{pubContent.problem.label}</div>
                     <p className={styles.cardDesc}>
-                        Publishing workflows are fragmented across emails, spreadsheets, and tools.
-                        This leads to poor visibility, delays, and inconsistent editorial processes.
+                        {pubContent.problem.text}
                     </p>
                 </div>
 
                 {/* SOLUTION */}
                 <div className={styles.card}>
-                    <div className={styles.cardSubtitle}>THE SOLUTION</div>
+                    <div className={styles.cardSubtitle}>{pubContent.solution.label}</div>
                     <p className={styles.cardDesc}>
-                        ORION transforms publishing into a system-driven workflow with AI-assisted processes,
-                        delivering clarity, consistency, and control.
+                        {pubContent.solution.text}
                     </p>
 
-                {/* WORKFLOW */}
+                    {/* WORKFLOW */}
                 </div>
                 <div className={styles.card}>
-                    <div className={styles.cardSubtitle}>WORKFLOW</div>
+                    <div className={styles.cardSubtitle}>{pubContent.workflow.label}</div>
                     <div className={styles.stack}>
-                        <div className={styles.innerBox}>Submission & Intake</div>
-                        <div className={styles.innerBox}>Validation & Pre-Editing</div>
-                        <div className={styles.innerBox}>Editorial Workflows</div>
-                        <div className={styles.innerBox}>Production & Publishing</div>
-                        <div className={styles.innerBox}>Insights & Reporting</div>
+                        {pubContent.workflow.steps.map((step) => (
+                            <div key={step} className={styles.innerBox}>{step}</div>
+                        ))}
                     </div>
 
                 </div>
 
                 {/* PLATFORM */}
                 <div className={styles.card}>
-                    <div className={styles.cardSubtitle}>PLATFORM</div>
+                    <div className={styles.cardSubtitle}>{pubContent.platform.label}</div>
 
-                    <div className={styles.innerBox}>
-                        <h3>SUBMIT+</h3>
-                        <p>Structured manuscript intake and validation.</p>
-                    </div>
-
-                    <div className={styles.innerBox}>
-                        <h3>EDITOR+</h3>
-                        <p>AI-assisted editorial workflows.</p>
-                    </div>
-
-                    <div className={styles.innerBox}>
-                        <h3>PUBLISH+</h3>
-                        <p>Analytics and business visibility.</p>
-                    </div>
+                    {pubContent.platform.items.map((item) => (
+                        <div key={item.name} className={styles.innerBox}>
+                            <h3>{item.name}</h3>
+                            <p>{item.description}</p>
+                        </div>
+                    ))}
                 </div>
 
             </div>
