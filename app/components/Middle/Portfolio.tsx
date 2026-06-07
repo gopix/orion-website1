@@ -2,6 +2,7 @@
 
 import styles from "./styles/Portfolio.module.css";
 import content from "@/content.json";
+import Link from "next/link";
 
 const portfolioContent = content.portfolio;
 
@@ -57,10 +58,10 @@ export default function Portfolio() {
                         </div>
                         <div className={styles.cardSubtitle}>{card.subtitle}</div>
                         <p className={styles.cardDesc}>{card.description}</p>
-                        <a href={card.link} className={styles.knowMore}>
+                        <Link href={card.link} className={styles.knowMore}>
                             {portfolioContent.knowMoreLabel}
                             <span className={styles.arrow}>→</span>
-                        </a>
+                        </Link>
                     </div>
                 ))}
             </div>

@@ -49,7 +49,7 @@ export default function Hero({
 
     return (
         <><div className={styles.main}>
-            <Image fill src={background} alt="background" style={{ objectFit: "cover" }} priority />
+            <Image fill src={background} alt="Abstract digital network representing publishing automation workflows" style={{ objectFit: "cover" }} priority />
             <div className={styles.overlay} />
 
             <button className={styles.arrowLeft} onClick={prev} />
@@ -63,8 +63,8 @@ export default function Hero({
                         : ""
                     }`}
             >
-                <h1>{item.title}</h1>
-                <h2>{item.subtitle}</h2>
+                <h2>{item.title}</h2>
+                <h3>{item.subtitle}</h3>
                 <p>{item.description}</p>
                 <button className={styles.cta} onClick={onCtaClick}>
                     {ctaText}
