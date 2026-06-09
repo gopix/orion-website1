@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Navbar from "./components/Navbar/Navbar";
 import Hero from "./components/Hero/Hero";
 import { HeroSlide } from "./components/Hero/Hero";
@@ -10,6 +11,27 @@ import info_image from "./components/Hero/img/info_image.png";
 import info_image2 from "./components/Hero/img/info_image2.png";
 
 import content from "@/content.json";
+
+export const metadata: Metadata = {
+  title: "ORION Bits Systems | AI & Automation for the Publishing Industry",
+  description: "Transform your publishing workflows with ORION Bits Systems. We provide AI, content engineering, and Zoho-powered business automation to drive growth.",
+  alternates: {
+    canonical: "/",
+  },
+  keywords: [
+    "AI publishing automation",
+    "Zoho CRM implementation",
+    "content engineering solutions",
+    "digital publishing workflows",
+    "publishing automation systems",
+    "editorial intelligence layer",
+    "Zoho business automation",
+    "automated manuscript validation",
+    "ORION Bits Systems",
+    "Ghaziabad Zoho partner",
+    "AI content operations"
+  ],
+};
 
 const slides: HeroSlide[] = content.home.slides;
 
@@ -24,6 +46,7 @@ export default function Home() {
     return (
         <>
             <Navbar />
+            <h1 className="visually-hidden">ORION Bits Systems: AI & Automation for Publishing</h1>
             <Hero slides={slides} background={bg}>
                 <Info blocks={InfoBlocks} />
             </Hero>

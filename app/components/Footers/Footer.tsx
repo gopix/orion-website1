@@ -22,7 +22,7 @@ export default function Footer() {
 
                 {/* LEFT */}
                 <div className={styles.left}>
-                    <Image src={logo} alt="ORION Logo" width={160} height={60} />
+                    <Image src={logo} alt="ORION Bits Systems - AI & Content Engineering Solutions Logo" width={160} height={60} />
 
                     <p className={styles.tagline}>
                         {footerContent.tagline}
@@ -35,15 +35,15 @@ export default function Footer() {
 
                     <div className={styles.socials}>
                         <a href="#" target="_blank">
-                            <Image src={twitter} alt="X" width={iconSize} height={iconSize} />
+                            <Image src={twitter} alt="ORION Bits Systems on Twitter (X)" width={iconSize} height={iconSize} />
                         </a>
 
                         <a href="#" target="_blank">
-                            <Image src={facebook} alt="Facebook" width={iconSize} height={iconSize} />
+                            <Image src={facebook} alt="ORION Bits Systems on Facebook" width={iconSize} height={iconSize} />
                         </a>
 
                         <a href="#" target="_blank">
-                            <Image src={linkedin} alt="LinkedIn" width={iconSize} height={iconSize} />
+                            <Image src={linkedin} alt="ORION Bits Systems on LinkedIn" width={iconSize} height={iconSize} />
                         </a>
                     </div>
                 </div>

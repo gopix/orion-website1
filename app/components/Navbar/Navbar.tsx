@@ -131,7 +131,7 @@ export default function Navbar() {
         <nav className={styles.nav}>
             {/* Logo */}
             <Link href="/" className={styles.logo}>
-                <Image src={logo} height={20} alt="logo" />
+                <Image src={logo} height={20} alt="ORION Bits Systems Logo - AI & Automation Solutions" />
             </Link>
 
             {/* Hamburger */}

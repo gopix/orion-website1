@@ -209,13 +209,13 @@
                 "title": "Zoho",
                 "subtitle": "Business Systems Implementation",
                 "description": "Empowering businesses with CRM setup, sales and workflow automation, inventory structuring, and custom reporting dashboards — configured precisely for publishing and distribution operations.",
-                "link": "#"
+                "link": "/solutions/CRM"
             },
             {
                 "title": "ORION Platform",
                 "subtitle": "Publishing Intelligence Layer",
                 "description": "A unified platform built for publishers — combining manuscript validation (SUBMIT+), AI-assisted editorial intelligence (EDITOR+), and real-time business dashboards (PUBLISH+) into one connected system.",
-                "link": "#"
+                "link": "/solutions/publishing"
             }
         ],
         "knowMoreLabel": "Know More"
@@ -240,7 +240,7 @@
         ],
         "infoBlocks": [
             {
-                "imageAlt": "Publishing industry technology",
+                "imageAlt": "ORION Bits Systems digital intelligence platform interface showing publishing industry automation analytics",
                 "heading": [
                     "Intelligent Digital Systems",
                     "for the Publishing Industry"
@@ -255,7 +255,7 @@
                 "reverse": false
             },
             {
-                "imageAlt": "Data-driven publishing workflows",
+                "imageAlt": "Zoho CRM dashboard with automated sales and inventory workflows for growing digital publishing teams",
                 "heading": [
                     "Zoho-Powered Business Systems",
                     "for Growing Organizations"
@@ -281,7 +281,7 @@
         ],
         "infoBlocks": [
             {
-                "imageAlt": "Orion intelligent systems",
+                "imageAlt": "AI systems integration diagram showing custom database connections and agentic workflow architecture",
                 "heading": [
                     "Deep Problem Understanding,",
                     "Intelligent System Design"
@@ -296,7 +296,7 @@
                 "reverse": false
             },
             {
-                "imageAlt": "Orion case studies impact",
+                "imageAlt": "Data analytics dashboard showing measurable operational efficiency gains and manual error reduction",
                 "heading": [
                     "Measurable Outcomes Across",
                     "Every Industry We Serve"
@@ -381,6 +381,7 @@
         ],
         "infoBlocks": [
             {
+                "imageAlt": "Abstract representation of artificial intelligence neural networks representing traditional software limitations vs intelligent systems",
                 "heading": [
                     "The Challenge with",
                     "Traditional Software"
@@ -395,6 +396,7 @@
                 "reverse": false
             },
             {
+                "imageAlt": "AI native system design blueprint featuring multi agent workflows and LLM orchestration",
                 "heading": [
                     "AI-Native System Design",
                     "Built for Real Workflows"
@@ -469,6 +471,7 @@
         ],
         "infoBlocks": [
             {
+                "imageAlt": "Illustration of CRM implementation pipeline mapping sales pipeline tracking and automated workflow steps",
                 "heading": [
                     "Why Most CRM",
                     "Implementations Fail"
@@ -483,6 +486,7 @@
                 "reverse": false
             },
             {
+                "imageAlt": "Modern CRM customer dashboard illustrating centralized data integration and sales performance tracking",
                 "heading": [
                     "A Structured Approach",
                     "to CRM Implementation"
@@ -547,7 +551,7 @@
         ],
         "infoBlocks": [
             {
-                "imageAlt": "Publishing workflow systems",
+                "imageAlt": "Publishing workflow system diagram showcasing structured pipelines from manuscript submission to production",
                 "heading": [
                     "Structured Publishing Workflows",
                     "for Modern Content Operations"
@@ -562,7 +566,7 @@
                 "reverse": false
             },
             {
-                "imageAlt": "Publishing platform intelligence",
+                "imageAlt": "ORION publishing intelligence platform dashboard tracking manuscript validation and editorial metrics",
                 "heading": [
                     "End-to-End Publishing Intelligence",
                     "with ORION Platform"
