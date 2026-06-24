@@ -13,7 +13,7 @@ import info_image2 from "./components/Hero/img/info_image2.png";
 import content from "@/content.json";
 
 export const metadata: Metadata = {
-  title: "ORION Bits Systems | AI & Automation for the Publishing Industry",
+  title: "Orion Bits Systems | Accessibility Remediation| AI & Automation For Publishing",
   description: "Transform your publishing workflows with ORION Bits Systems. We provide AI, content engineering, and Zoho-powered business automation to drive growth.",
   alternates: {
     canonical: "/",
@@ -46,7 +46,7 @@ export default function Home() {
     return (
         <>
             <Navbar />
-            <h1 className="visually-hidden">ORION Bits Systems: AI & Automation for Publishing</h1>
+            <h1 className="visually-hidden">Orion Bits Systems | Accessibility Remediation| AI & Automation For Publishing</h1>
             <Hero slides={slides} background={bg}>
                 <Info blocks={InfoBlocks} />
             </Hero>

@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: {
-    default: "ORION Bits Systems | AI & Automation for the Publishing Industry",
+    default: "Orion Bits Systems | Accessibility Remediation| AI & Automation For Publishing",
     template: "%s | ORION Bits Systems",
   },
   description: "Transform your publishing workflows with ORION Bits Systems. We provide AI, content engineering, and Zoho-powered business automation to drive growth.",
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     "AI content operations"
   ],
   openGraph: {
-    title: "ORION Bits Systems | AI & Automation for the Publishing Industry",
+    title: "Orion Bits Systems | Accessibility Remediation| AI & Automation For Publishing",
     description: "Transform your publishing workflows with ORION Bits Systems. We provide AI, content engineering, and Zoho-powered business automation to drive growth.",
     url: "https://orionbitssystems.com",
     siteName: "ORION Bits Systems",
@@ -42,7 +42,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "ORION Bits Systems | AI & Automation for the Publishing Industry",
+    title: "Orion Bits Systems | Accessibility Remediation| AI & Automation For Publishing",
     description: "Transform your publishing workflows with ORION Bits Systems. We provide AI, content engineering, and Zoho-powered business automation to drive growth.",
     images: ["/logo.jpeg"],
   },
