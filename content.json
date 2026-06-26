@@ -21,6 +21,10 @@
             {
                 "label": "Services",
                 "dropdown": [
+                     {
+                        "label": "Aceesibility Remediation",
+                        "href": "/services/accesibility"
+                    },
                     {
                         "label": "AI & Intelligent Systems Development",
                         "href": "/services/ai-system-dev"
