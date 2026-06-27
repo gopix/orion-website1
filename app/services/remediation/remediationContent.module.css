@@ -1,0 +1,272 @@
+/* ───────────────── CONTAINER ───────────────── */
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+
+  margin: 0 auto;
+
+  padding: 90px 24px;
+
+  box-sizing: border-box;
+}
+
+/* ───────────────── SECTION ───────────────── */
+
+.section {
+  margin-bottom: 80px;
+}
+
+/* ───────────────── TITLES ───────────────── */
+
+.title {
+  font-size: clamp(1.8rem, 3vw, 2.5rem);
+
+  font-weight: 800;
+
+  color: #0f172a;
+
+  text-align: center;
+
+  margin-bottom: 22px;
+
+  letter-spacing: -0.03em;
+}
+
+/* ───────────────── DESCRIPTION ───────────────── */
+
+.desc {
+  color: #475569;
+
+  width: 100%;
+  max-width: 760px;
+
+  line-height: 1.85;
+
+  font-size: 1rem;
+
+  text-align: center;
+
+  margin: 0 auto;
+
+  padding: 0 20px;
+
+  box-sizing: border-box;
+}
+
+/* ───────────────── GRID ───────────────── */
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 22px;
+  width: 100%;
+}
+/* ───────────────── FEATURE CARDS ───────────────── */
+
+.card {
+  flex: 1 1 240px;
+  max-width: 280px;
+  padding: 24px;
+
+  border-radius: 18px;
+
+  border: 1px solid #e2e8f0;
+
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.92),
+    rgba(248, 250, 252, 0.96)
+  );
+
+  color: #0f172a;
+
+  font-weight: 600;
+
+  line-height: 1.6;
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    border-color 0.25s ease;
+
+  box-shadow: 0 8px 24px rgba(59, 130, 246, 0.04);
+
+  backdrop-filter: blur(12px);
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  border-color: #93c5fd;
+
+  background: #2367d5;
+
+  border-color: #2367d5;
+
+  color: white;
+
+  box-shadow: 0 18px 40px rgba(59, 130, 246, 0.12);
+}
+
+/* ───────────────── CARD SECTIONS ───────────────── */
+
+.cardSection {
+  width: 100%;
+  max-width: 1200px;
+  text-align: center;
+  margin: 0 auto 30px;
+
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.92),
+    rgba(248, 250, 252, 0.95)
+  );
+
+  border: 1px solid #e2e8f0;
+
+  border-radius: 18px;
+
+  padding: 36px;
+
+  box-shadow: 0 10px 30px rgba(59, 130, 246, 0.05);
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.cardSection:hover {
+  transform: translateY(-4px);
+
+  box-shadow: 0 16px 40px rgba(59, 130, 246, 0.1);
+}
+
+.cardSection h2 {
+  font-size: 1.35rem;
+
+  margin-bottom: 18px;
+
+  color: #0f172a;
+
+  font-weight: 700;
+}
+
+/* ───────────────── LIST ───────────────── */
+
+.list {
+  padding-left: 20px;
+
+  line-height: 2;
+
+  color: #475569;
+
+  font-size: 1rem;
+}
+
+.list li {
+  margin-bottom: 6px;
+}
+
+.list strong {
+  color: #0f172a;
+}
+
+/* ───────────────── GRID 2 ───────────────── */
+
+.grid2 {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 30px;
+
+  align-items: center;
+}
+
+/* ───────────────── CTA ───────────────── */
+
+.cta {
+  margin-top: 80px;
+
+  background: linear-gradient(135deg, #0a2540, #0f3a66);
+
+  color: white;
+
+  padding: 70px 24px;
+
+  text-align: center;
+
+  border-radius: 24px;
+
+  box-shadow: 0 18px 50px rgba(15, 58, 102, 0.25);
+}
+
+.cta h2 {
+  font-size: clamp(1.8rem, 3vw, 2.6rem);
+
+  margin-bottom: 14px;
+
+  font-weight: 800;
+}
+
+/* ───────────────── BUTTON ───────────────── */
+
+.btn {
+  display: inline-block;
+
+  margin-top: 24px;
+
+  padding: 14px 34px;
+
+  background: linear-gradient(135deg, #2563eb, #1d4ed8);
+
+  border-radius: 12px;
+
+  color: white;
+
+  text-decoration: none;
+
+  font-size: 0.96rem;
+
+  font-weight: 600;
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+
+  box-shadow: 0 12px 28px rgba(37, 99, 235, 0.28);
+}
+
+/* ───────────────── MOBILE ───────────────── */
+
+@media (max-width: 768px) {
+  .container {
+    padding: 70px 18px;
+  }
+
+  .grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .cardSection {
+    padding: 28px 22px;
+  }
+
+  .list {
+    line-height: 1.8;
+  }
+
+  .cta {
+    padding: 56px 18px;
+  }
+}

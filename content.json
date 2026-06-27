@@ -2,7 +2,7 @@
     "navbar": {
         "items": [
             {
-                "label": "About Us",
+                "label": "About US",
                 "href": "/"
             },
             {
@@ -21,9 +21,9 @@
             {
                 "label": "Services",
                 "dropdown": [
-                     {
+                    {
                         "label": "Accessibility Remediation",
-                        "href": "/services/accessibility"
+                        "href": "/services/remediation"
                     },
                     {
                         "label": "AI & Intelligent Systems Development",
@@ -374,6 +374,125 @@
             "ctaHeading": "Let's Build Your Next System",
             "ctaText": "Every business has unique challenges. We specialize in transforming those challenges into scalable, intelligent systems.",
             "ctaButton": "Contact Us"
+        }
+    },
+    "remediation": {
+        "slides": [
+            {
+                "title": "Accessibility & Remediation Services",
+                "subtitle": "Ensuring Digital Content is Accessible to All",
+                "description": "We transform legacy and new content into fully accessible formats compliant with current global standards including WCAG, PDF/UA, and Section 508."
+            }
+        ],
+        "infoBlocks": [
+            {
+                "imageAlt": "Digital accessibility compliance showing screen reader and accessible document structure",
+                "heading": [
+                    "The Importance of",
+                    "Digital Accessibility"
+                ],
+                "body": "Digital content must be accessible to everyone. Non-compliant documents and publications not only limit your audience but also expose your organization to legal risks. True accessibility goes beyond automated checks—it requires structured remediation.",
+                "philosophyTitle": [
+                    "From Compliance",
+                    "to INCLUSION"
+                ],
+                "philosophyHighlight": "INCLUSION",
+                "philosophyText": "We believe accessibility is a fundamental right. Our remediation processes ensure your content is not just compliant, but genuinely usable for everyone.",
+                "reverse": false
+            },
+            {
+                "imageAlt": "Automated and manual accessibility remediation workflow",
+                "heading": [
+                    "A Comprehensive Approach",
+                    "to Remediation"
+                ],
+                "body": "At ORION, we combine AI-assisted validation with rigorous manual review and screen reader testing. Whether it's high-volume backlist processing or complex PDF/EPUB remediation, we deliver fully compliant, accessible content at scale.",
+                "philosophyTitle": [
+                    "Precision at",
+                    "SCALE"
+                ],
+                "philosophyHighlight": "SCALE",
+                "philosophyText": "Our automated workflows and expert QA processes allow us to handle large-scale remediation projects without compromising on quality or compliance.",
+                "reverse": true
+            }
+        ],
+        "content": {
+            "whatWeBuildTitle": "Our Core Services",
+            "whatWeBuildItems": [
+                "PDF Remediation — tagging, reading order, alt text, color contrast, form fields",
+                "EPUB Accessibility — EPUB 3 / EPUB Accessibility 1.1 compliant ebook production",
+                "WCAG 2.1 / 2.2 AA compliance across digital publications",
+                "Section 508 & ADA Title II compliance for US publishers",
+                "EN 301 549 compliance for European publishers",
+                "Backlist remediation at scale — high-volume batch processing",
+                "Screen reader validation — JAWS, NVDA, VoiceOver"
+            ],
+            "flagshipTitle": "Standards & Compliance We Support",
+            "flagshipItems": [
+                {
+                    "name": "WCAG 2.1 / 2.2 AA",
+                    "description": "Web and digital document accessibility"
+                },
+                {
+                    "name": "PDF/UA (ISO 14289)",
+                    "description": "Universal accessibility for PDFs"
+                },
+                {
+                    "name": "Section 508 (US)",
+                    "description": "Federal accessibility requirement"
+                },
+                {
+                    "name": "ADA Title II (US)",
+                    "description": "Digital content accessibility for all organizations"
+                },
+                {
+                    "name": "EN 301 549 (EU)",
+                    "description": "European accessibility standard"
+                },
+                {
+                    "name": "JATS / BITS XML",
+                    "description": "Journal and book XML markup standards"
+                },
+                {
+                    "name": "NLM DTD",
+                    "description": "National Library of Medicine journal standard"
+                }
+            ],
+            "techTitle": "Quality Assurance Process",
+            "techItems": [
+                "Initial technical assessment",
+                "Accessibility validation using automated tools",
+                "Manual remediation review",
+                "Screen reader testing (JAWS, NVDA)",
+                "Compliance verification",
+                "Final QA signoff",
+                "Delivery with validation reports"
+            ],
+            "benefitsTitle": "Technology & Automation",
+            "benefitsItems": [
+                "AI-assisted accessibility validation",
+                "Orion Accessibility Engine (OAE)",
+                "Automated PDF structure analysis",
+                "PDF/UA validation workflows",
+                "WCAG validation reports",
+                "PDFix and accessibility validation tools",
+                "XML processing automation"
+            ],
+            "whoTitle": "Tools & Technologies",
+            "whoItems": [
+                "PDFix",
+                "VeraPDF",
+                "PAC",
+                "JAWS",
+                "NVDA",
+                "Adobe Acrobat Pro",
+                "XML workflows",
+                "Python automation"
+            ],
+            "whyTitle": "Why ORION",
+            "whyText": "We transform legacy and new content into fully accessible formats compliant with current global standards, combining automation with expert manual validation.",
+            "ctaHeading": "Need Accessible Content?",
+            "ctaButton": "Talk to Our Team"
         }
     },
     "aiSystemsDev": {
